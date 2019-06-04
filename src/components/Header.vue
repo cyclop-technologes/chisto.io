@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="container">
+  <div class="container header-container">
     <b-navbar type="dark" class="pt-3">
       <b-navbar-brand>
           <img src="../assets/img/logo.svg">
@@ -30,4 +30,11 @@ export default {
 }
 </script>
 <style lang="scss">
+.header-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9;
+}
 </style>

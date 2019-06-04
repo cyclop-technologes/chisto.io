@@ -1,24 +1,22 @@
 <template>
-  <div class="banner">
-    <Header></Header>
-    <Footer></Footer>
+  <div class="banner position-relative">
+    <Application></Application>
   </div>
 </template>
 <script>
-import Header from './Header.vue';
-import Footer from './Footer.vue';
+import Application from '../components/Application.vue';
 
 export default {
   components: {
-    Header,
-    Footer,
+    Application,
   },
 };
 
 </script>
 <style lang="scss">
+@import '../assets/scss/main.scss';
 .banner {
   min-height: 100vh;
-  background-color: #7567DB;
+  background: url('../assets/img/bg-banner.svg')
 }
 </style>

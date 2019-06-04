@@ -65,7 +65,7 @@ export default {
 @import '../assets/scss/main.scss';
 
 .footer {
-  background-color: $primary;
+  background: url('../assets/img/bg-footer.svg') no-repeat;
 }
 
 .footer-container {
