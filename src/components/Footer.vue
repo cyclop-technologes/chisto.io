@@ -80,6 +80,7 @@ export default {
 
 
 .contacts {
+  text-align: center;
   color: $white;
   font-size: 14px;
   padding-left: 0;
