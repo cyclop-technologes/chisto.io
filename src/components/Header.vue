@@ -2,10 +2,10 @@
   <div class="container header-container">
     <b-navbar type="dark" class="pt-3">
       <b-navbar-brand>
-          <img src="../assets/img/logo.svg">
+          <b-link to="/"><img src="../assets/img/logo.svg"></b-link>
       </b-navbar-brand>
       <b-navbar-nav class="ml-auto">
-        <b-nav-item class="text-uppercase" v-for="(item, key) in navLinks"  :key="key" :to="key">
+        <b-nav-item class="text-uppercase" v-for="(item, key) in navLinks"  :key="key" :to="`/${key}`">
           {{item}}
         </b-nav-item>
       </b-navbar-nav>

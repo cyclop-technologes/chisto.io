@@ -1,12 +1,19 @@
 <template>
   <div class="banner position-relative">
-    <Application></Application>
+    <slot></slot>
+    <Application v-if="footer"></Application>
   </div>
 </template>
 <script>
 import Application from '../components/Application.vue';
 
 export default {
+  props: {
+    footer: {
+      type: Boolean,
+      default: true,
+    },
+  },
   components: {
     Application,
   },
