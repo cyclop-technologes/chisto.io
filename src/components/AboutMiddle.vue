@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="container about-middle-container">
+  <div class="container about-middle-container text-center">
     <h1 class="text-uppercase h1-header mb-4">почему нам доверяют</h1>
     <div class="about-info d-flex flex-row">
       <div class="about-info-item d-flex mt-5  flex-column align-items-center justify-content-center">
