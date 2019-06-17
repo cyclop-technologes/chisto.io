@@ -1,6 +1,4 @@
 import Vue from 'vue';
-import App from './App.vue';
-import router from './router';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import BootstrapVue from 'bootstrap-vue';
@@ -12,9 +10,11 @@ import {
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
 
-library.add(faInstagram, faVk, faOdnoklassniki, faYoutube);
-
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import router from './router';
+import App from './App.vue';
+
+library.add(faInstagram, faVk, faOdnoklassniki, faYoutube);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 
