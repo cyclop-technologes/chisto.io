@@ -16,7 +16,7 @@
 
 export default {
   data() {
-    return{
+    return {
       navLinks: {
         about: 'о нас',
         franchise: 'франшиза',
@@ -24,10 +24,10 @@ export default {
         faq: 'faq',
         feedback: 'отзывы',
         contacts: 'контакты',
-      }
-    }
-  }
-}
+      },
+    };
+  },
+};
 </script>
 <style lang="scss">
 .header-container {

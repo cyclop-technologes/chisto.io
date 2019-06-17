@@ -5,7 +5,7 @@
   </div>
 </template>
 <script>
-import Application from '../components/Application.vue';
+import Application from './Application.vue';
 
 export default {
   props: {
@@ -24,6 +24,7 @@ export default {
 @import '../assets/scss/main.scss';
 .banner {
   min-height: 100vh;
-  background: url('../assets/img/bg-banner.svg')
+  background: url('../assets/img/bg-banner.svg');
+  background-size: cover;
 }
 </style>

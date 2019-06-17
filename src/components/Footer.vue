@@ -48,17 +48,17 @@
 
 export default {
   data() {
-    return{
+    return {
       footLinks: {
         about: 'о нас',
         franchise: 'франшиза',
         jobs: 'вакансии',
         faq: 'faq',
         feedback: 'отзывы',
-      }
-    }
-  }
-}
+      },
+    };
+  },
+};
 
 </script>
 <style lang="scss">
@@ -66,6 +66,7 @@ export default {
 
 .footer {
   background: url('../assets/img/bg-footer.svg') no-repeat;
+  background-size: cover;
 }
 
 .footer-container {
