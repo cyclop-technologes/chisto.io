@@ -11,7 +11,8 @@
       <div data-aos="fade-up" data-aos-delay="100" class="about-info-item d-flex mt-5 ml-5 flex-column align-items-center justify-content-center">
         <h3 class="h3-header pt-4 pb-4">Персонал</h3>
         <img src="../assets/img/handshake.svg">
-        <p class="info-item-text pt-4">Каждый наш сотрудник — это человек, в котором мы уверены. Мы устраиваем строгий отбор и только после обучения и проверки службой безопасности допускаем клинера к работе.</p>
+        <p class="info-item-text pt-4">Каждый наш сотрудник — это человек, в котором мы уверены.
+Мы устраиваем строгий отбор и только после обучения и проверки службой безопасности допускаем клинера к работе.</p>
       </div>
       <div data-aos="fade-up" data-aos-delay="200" class="about-info-item d-flex mt-5 ml-5 flex-column align-items-center justify-content-center">
         <h3 class="h3-header pt-4 pb-4">Безопасность</h3>

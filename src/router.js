@@ -2,9 +2,11 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
 import About from './views/About.vue';
-import Flats from './views/Flats.vue';
+import Kvartiry from './views/Kvartiry.vue';
 import Repair from './views/Repair.vue';
 import Okna from './views/Okna.vue';
+import Khimchistka from './views/Khimchistka.vue';
+import Faq from './views/Faq.vue';
 
 Vue.use(Router);
 
@@ -23,9 +25,9 @@ export default new Router({
       component: About,
     },
     {
-      path: '/flats',
-      name: 'flats',
-      component: Flats,
+      path: '/kvartiry',
+      name: 'kvartiry',
+      component: Kvartiry,
     },
     {
       path: '/repair',
@@ -36,6 +38,16 @@ export default new Router({
       path: '/okna',
       name: 'okna',
       component: Okna,
+    },
+    {
+      path: '/khimchistka',
+      name: 'khimchistka',
+      component: Khimchistka,
+    },
+    {
+      path: '/faq',
+      name: 'faq',
+      component: Faq,
     },
     // {
     //   path: '/about',

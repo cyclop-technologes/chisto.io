@@ -5,7 +5,7 @@
   </div>
 </template>
 <script>
-import Application from '../components/Application.vue';
+import Application from './Application.vue';
 
 export default {
   props: {

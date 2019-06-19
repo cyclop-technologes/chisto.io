@@ -48,17 +48,17 @@
 
 export default {
   data() {
-    return{
+    return {
       footLinks: {
         about: 'о нас',
         franchise: 'франшиза',
         jobs: 'вакансии',
         faq: 'faq',
         feedback: 'отзывы',
-      }
-    }
-  }
-}
+      },
+    };
+  },
+};
 
 </script>
 <style lang="scss">

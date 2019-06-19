@@ -1,9 +1,9 @@
 <template>
-  <div class="flat-page position-relative">
+  <div class="khimchistka-page position-relative">
     <Header></Header>
     <Banner></Banner>
     <Middle>
-      <FlatMiddle></FlatMiddle>
+      <KhimchistkaMiddle></KhimchistkaMiddle>
     </Middle>
     <Footer></Footer>
 
@@ -14,23 +14,23 @@
 import Header from '../components/Header.vue';
 import Banner from '../components/Banner.vue';
 import Middle from '../components/Middle.vue';
-import FlatMiddle from '../components/FlatMiddle.vue';
+import KhimchistkaMiddle from '../components/KhimchistkaMiddle.vue';
 import Footer from '../components/Footer.vue';
 
 export default {
-  name: 'flats',
+  name: 'khimchistka',
   components: {
     Header,
     Banner,
     Middle,
     Footer,
-    FlatMiddle,
+    KhimchistkaMiddle,
   },
 };
 </script>
 <style lang="scss">
 @import '../assets/scss/main.scss';
-.flat-page {
+.khimchistka-page {
 
 }
 
