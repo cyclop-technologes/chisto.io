@@ -66,6 +66,7 @@ export default {
 
 .footer {
   background: url('../assets/img/bg-footer.svg') no-repeat;
+  background-size: cover;
 }
 
 .footer-container {

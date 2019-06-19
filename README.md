@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4b8735fe-601c-48f2-ab36-a67e42c4552f/deploy-status)](https://app.netlify.com/sites/reverent-jennings-271ad8/deploys)
 # chisto.io
 
 ## Project setup
