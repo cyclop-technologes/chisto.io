@@ -61,7 +61,7 @@ export default {
   },
 
     props: {
-      footer: {
+      block: {
         type: Boolean,
         default: false,
       },
