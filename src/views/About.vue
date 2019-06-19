@@ -7,7 +7,7 @@
     <Middle>
       <AboutMiddle></AboutMiddle>
     </Middle>
-    <Footer></Footer>
+    <Footer :block='true'></Footer>
 
   </div>
 </template>

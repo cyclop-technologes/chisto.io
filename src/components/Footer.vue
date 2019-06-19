@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="footer d-flex justify-content-center align-items-center flex-column">
+    <HowWeWork v-if="block"></HowWeWork>
     <div class="container footer-container">
       <div class="border-bottom mt-5 mb-3"></div>
       <div class="row">
@@ -45,7 +46,7 @@
   </div>
 </template>
 <script>
-
+import HowWeWork from './HowWeWork.vue';
 export default {
   data() {
     return {
@@ -58,6 +59,17 @@ export default {
       },
     };
   },
+
+    props: {
+      footer: {
+        type: Boolean,
+        default: false,
+      },
+    },
+    components: {
+      HowWeWork,
+    },
+
 };
 
 </script>
