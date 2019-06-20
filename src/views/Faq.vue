@@ -1,7 +1,8 @@
 <template>
   <div class="faq-page position-relative">
-    <Header></Header>
-    <Banner></Banner>
+    <Banner>
+      <FaqBanner></FaqBanner>
+    </Banner>
     <Middle>
       <FaqMiddle></FaqMiddle>
     </Middle>
@@ -10,8 +11,8 @@
 </template>
 
 <script>
-import Header from '../components/Header.vue';
 import Banner from '../components/Banner.vue';
+import FaqBanner from '../components/FaqBanner.vue';
 import Middle from '../components/Middle.vue';
 import FaqMiddle from '../components/FaqMiddle.vue';
 import Footer from '../components/Footer.vue';
@@ -19,11 +20,11 @@ import Footer from '../components/Footer.vue';
 export default {
   name: 'faq',
   components: {
-    Header,
     Banner,
     Middle,
     Footer,
     FaqMiddle,
+    FaqBanner,
   },
 };
 </script>
@@ -32,5 +33,4 @@ export default {
 .faq-page {
 
 }
-
 </style>
