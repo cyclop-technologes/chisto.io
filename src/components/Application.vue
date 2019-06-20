@@ -15,12 +15,11 @@
 <style lang="scss">
 @import '../assets/scss/main.scss';
 .mobile-application {
-  position: absolute;
+  position: relative;
   height: 126px;
   width: 100%;
   background-color: #1E2147;
-  bottom: 0;
-  left: 0;
+  margin-top: auto;
 }
 .mobile-phone {
   position: absolute;

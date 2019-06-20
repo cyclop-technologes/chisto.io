@@ -1,11 +1,13 @@
 <template>
   <div class="banner position-relative">
+    <Header></Header>
     <slot></slot>
     <Application v-if="footer"></Application>
   </div>
 </template>
 <script>
 import Application from './Application.vue';
+import Header from './Header.vue';
 
 export default {
   props: {
@@ -15,6 +17,7 @@ export default {
     },
   },
   components: {
+    Header,
     Application,
   },
 };
