@@ -27,6 +27,8 @@ export default {
 @import '../assets/scss/main.scss';
 .banner {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: url('../assets/img/bg-banner.svg');
   background-size: cover;
 }
