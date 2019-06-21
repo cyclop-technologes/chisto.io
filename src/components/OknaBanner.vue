@@ -22,7 +22,6 @@
           </b-form-group>
            <b-form-input
               class="text-center rounded-pill mb-4 border-primary"
-              v-model="text"
               type="tel"
               placeholder="+7(_ _ _)_ _ _ _ _ _ _"
           >
@@ -37,21 +36,19 @@
     </b-row>
   </b-container>
 </template>
-
 <script>
 export default {
-    data() {
-      return {
+  data() {
+    return {
         selected: 'radio1',
         options: [
           { text: 'Окна', value: 'radio1' },
-          { text: 'Витражи', value: 'radio2' }
+          { text: 'Витражи', value: 'radio2' },
         ]
-      }
-    }
-  }
+    };
+  },
+};
 </script>
-
 <style lang="scss">
 @import '../assets/scss/main.scss';
 .windows-form {
