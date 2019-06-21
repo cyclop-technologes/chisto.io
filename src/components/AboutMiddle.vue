@@ -3,7 +3,14 @@
     <h1 class="text-uppercase h1-header mb-4">почему нам доверяют</h1>
     <div class="about-info d-flex flex-row">
       <b-col v-for='(item, index) in about' :key="index" cols="12" lg="4">
-        <div data-aos="fade-up" class="about-info-item d-flex mt-5 flex-column align-items-center justify-content-center">
+        <div
+          data-aos="fade-up"
+          class="about-info-item
+            d-flex
+            mt-5
+            flex-column
+            align-items-center
+            justify-content-center">
           <h3 class="h3-header pt-4 pb-4">{{item.title}}</h3>
           <img src="../assets/img/handshake.svg"/>
           <p class="info-item-text pt-4">{{item.body}}</p>
