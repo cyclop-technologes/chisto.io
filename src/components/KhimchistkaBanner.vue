@@ -3,7 +3,7 @@
     <b-row>
       <b-col data-aos="fade-right" cols="12" lg="5" class="text-white">
         <h1 class="h1-header mb-5 text-uppercase">химчистка</h1>
-        <p>Занимаемся химчисткой мягкой мебели и ковровых покрытий с выездом на дом или в офис. Используем только гипоаллергенные и профессиональные средства.</p>
+        <p>{{text}}</p>
       </b-col>
       <b-col data-aos="fade-left" cols="12" lg="4" offset-lg="1" class="position-relative">
         <b-form class="bg-white khim-form shadow">
@@ -64,6 +64,7 @@
 export default {
   data() {
     return {
+      text: 'Занимаемся химчисткой мягкой мебели и ковровых покрытий с выездом на дом или в офис. Используем только гипоаллергенные и профессиональные средства.',
       furniture: false,
       mattress: false,
       coating: false,

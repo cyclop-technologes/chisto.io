@@ -3,10 +3,7 @@
     <b-row>
       <b-col data-aos="fade-right" cols="12" lg="5" class="text-white">
         <h1 class="h1-header mb-5 text-uppercase">уборка квартир и домов</h1>
-        <p>Вы можете воспользоваться нашими услугами и заказать поддерживающую или генеральную уборку.
-          От выбранной вами услуги зависит оборудование, с которым приедет клинер.
-Для расчета стоимости больших площадей вы можете бесплатно вызвать специалиста по оценке:
-представитель компании озвучит точную стоимость уборки на месте.</p>
+        <p>{{text}}</p>
       </b-col>
       <b-col data-aos="fade-left" cols="12" lg="4" offset-lg="1" class="position-relative">
         <b-form class="bg-white kvartiry-form shadow">
@@ -29,19 +26,43 @@
          >
          </b-form-input>
          <div class="position-relative bg-white border-primary rounded-pill my-3">
-           <b-button @click="counterRem(flats, 'flatIndex')" class="ml-2 p-0 prev-step-btn step-btn"  variant="primary" href="">-</b-button>
+           <b-button
+             @click="counterRem(flats, 'flatIndex')"
+             class="ml-2 p-0 prev-step-btn step-btn"
+             variant="primary"
+             href="">-</b-button>
            <div class="text-center">{{currentFlat}}</div>
-          <b-button @click="counterAdd(flats, 'flatIndex')" class="mr-2 p-0 next-step-btn step-btn"  variant="primary" href="">+</b-button>
+          <b-button
+            @click="counterAdd(flats, 'flatIndex')"
+            class="mr-2 p-0 next-step-btn step-btn"
+            variant="primary"
+            href="">+</b-button>
          </div>
          <div class="position-relative bg-white border-primary rounded-pill my-3">
-           <b-button @click="counterRem(toilets, 'toiletIndex')" class="ml-2 p-0 prev-step-btn step-btn"  variant="primary" href="">-</b-button>
+           <b-button
+             @click="counterRem(toilets, 'toiletIndex')"
+             class="ml-2 p-0 prev-step-btn step-btn"
+             variant="primary"
+             href="">-</b-button>
            <div class="text-center">{{currentToilet}}</div>
-          <b-button @click="counterAdd(toilets, 'toiletIndex')" class="mr-2 p-0 next-step-btn step-btn"  variant="primary" href="">+</b-button>
+          <b-button
+            @click="counterAdd(toilets, 'toiletIndex')"
+            class="mr-2 p-0 next-step-btn step-btn"
+            variant="primary"
+            href="">+</b-button>
          </div>
          <div class="position-relative bg-white border-primary rounded-pill my-3">
-           <b-button @click="counterRem(windows, 'windowsIndex')" class="ml-2 p-0 prev-step-btn step-btn"  variant="primary" href="">-</b-button>
+           <b-button
+             @click="counterRem(windows, 'windowsIndex')"
+             class="ml-2 p-0 prev-step-btn step-btn"
+             variant="primary"
+             href="">-</b-button>
            <div class="text-center">{{currentWindows}}</div>
-          <b-button @click="counterAdd(windows, 'windowsIndex')" class="mr-2 p-0 next-step-btn step-btn"  variant="primary" href="">+</b-button>
+          <b-button
+            @click="counterAdd(windows, 'windowsIndex')"
+            class="mr-2 p-0 next-step-btn step-btn"
+            variant="primary"
+            href="">+</b-button>
          </div>
            <b-form-input
               class="text-center rounded-pill mb-4 border-primary"
@@ -54,7 +75,7 @@
               Рассчитать стоимость
           </b-button>
         </b-form>
-        <img class="kvartiry-img" src="../assets/img/cleaner-kvartiry.svg">
+        <img class="kvartiry-img" src="../assets/img/cleaner-kvartiry.svg"/>
       </b-col>
     </b-row>
   </b-container>
@@ -64,6 +85,7 @@
 export default {
   data() {
     return {
+      text: 'Вы можете воспользоваться нашими услугами и заказать поддерживающую или генеральную уборку. От выбранной вами услуги зависит оборудование, с которым приедет клинер. Для расчета стоимости больших площадей вы можете бесплатно вызвать специалиста по оценке: представитель компании озвучит точную стоимость уборки на месте.',
       selected: 'radio1',
       options: [
         { text: 'Генеральная', value: 'radio1' },

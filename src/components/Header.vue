@@ -34,5 +34,9 @@ export default {
 };
 </script>
 <style lang="scss">
-
+  @import '../assets/scss/main.scss';
+  .nav-link{
+    color: $white !important;
+    opacity: 1 !important;
+  }
 </style>
