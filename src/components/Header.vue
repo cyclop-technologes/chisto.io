@@ -4,7 +4,7 @@
       <b-navbar-brand>
           <b-link to="/"><img src="../assets/img/logo.svg"></b-link>
       </b-navbar-brand>
-      <b-navbar-nav class="ml-auto">
+      <b-navbar-nav fill class="ml-auto">
         <b-nav-item class="text-uppercase" v-for="(item, key) in navLinks"  :key="key" :to="`/${key}`">
           {{item}}
         </b-nav-item>
@@ -30,6 +30,11 @@ export default {
 };
 </script>
 <style lang="scss">
+@import '../assets/scss/main.scss';
+.nav-link {
+  opacity: 1 !important;
+  color: $white !important;
+}
 .header-container {
   position: absolute;
   top: 0;
