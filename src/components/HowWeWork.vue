@@ -42,17 +42,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      // articles: [
-      //   {
-      //     title
-      //     body
-      //     float
-      //   }
-      // ]
-    }
-  }
 };
 </script>
 

@@ -4,12 +4,8 @@
       <b-navbar-brand>
           <b-link to="/"><img src="../assets/img/logo.svg"></b-link>
       </b-navbar-brand>
-      <b-navbar-nav class="ml-auto">
-        <b-nav-item
-        class="text-uppercase"
-        v-for="(item, key) in navLinks"
-        :key="key"
-        :to="`/${key}`">
+      <b-navbar-nav fill class="ml-auto">
+        <b-nav-item class="text-uppercase" v-for="(item, key) in navLinks"  :key="key" :to="`/${key}`">
           {{item}}
         </b-nav-item>
       </b-navbar-nav>
