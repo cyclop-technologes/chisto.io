@@ -1,6 +1,6 @@
 <template lang="html">
-  <div class="container">
-    <h1 class="h1-header text-uppercase okna-header">оконный клининг</h1>
+  <div class="container okna-middle">
+    <h1 class="h1-header text-uppercase">оконный клининг</h1>
     <div class="about-windows-cleaning">
       <div class="windows-cleaning-top d-flex justify-content-between">
         <p data-aos="fade-right" class="windows-cleaning-info">
@@ -39,8 +39,8 @@ export default {
 
 <style lang="scss">
 @import '../assets/scss/main.scss';
-.okna-header {
-  padding-top: 6rem;
+.okna-middle {
+  padding: 8rem 0;
 }
 .windows-cleaning-top {
   margin: 4rem 0 6rem 0;

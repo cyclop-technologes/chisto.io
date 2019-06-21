@@ -1,6 +1,6 @@
 <template lang="html">
-  <div class="text-center">
-    <h1 class="h1-header flat-header text-uppercase">сравнить уборку</h1>
+  <div class="text-center kvartiry-middle">
+    <h1 class="h1-header text-uppercase">сравнить уборку</h1>
     <div class="d-flex justify-content-around">
       <div data-aos="fade-right" class="general-clean">
         <h4 class="h4-header text-uppercase mt-5 mb-5">генеральная уборка</h4>
@@ -39,8 +39,8 @@ export default {
 
 <style lang="scss">
 @import '../assets/scss/main.scss';
-.flat-header {
-  padding-top: 130px;
+.kvartiry-middle {
+  padding: 8rem 0;
 }
 .general-list {
   position: relative;

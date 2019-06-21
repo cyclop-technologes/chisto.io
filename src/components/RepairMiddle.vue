@@ -1,6 +1,6 @@
 <template lang="html">
-  <div class="text-center">
-    <h1 class="h1-header flat-header text-uppercase">в чем отличия от обычной уборки</h1>
+  <div class="text-center repair-middle">
+    <h1 class="h1-header text-uppercase">в чем отличия от обычной уборки</h1>
     <div class="d-flex justify-content-center align-items-center text-left mt-5">
       <div class="left-block">
         <img src="../assets/img/repair-img.png">
@@ -27,6 +27,9 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/scss/main.scss';
+.repair-middle {
+  padding: 8rem 0;
+}
 
 .repair-list-item:nth-child(2),
 .repair-list-item:nth-child(6) {

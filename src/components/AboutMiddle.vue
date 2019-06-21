@@ -31,7 +31,7 @@
 <style lang="scss">
 @import '../assets/scss/main.scss';
 .about-middle-container {
-  padding-top: 6.25rem;
+  padding: 8rem 0;
 }
 .about-info-item {
   border-radius: 12px;

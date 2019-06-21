@@ -1,6 +1,6 @@
 <template lang="html">
-  <div class="container">
-    <h1 class="h3-header text-uppercase khimchistka-header">Применение самых современных технологий и экологически безопасных препаратов</h1>
+  <div class="container khimchistka-middle">
+    <h1 class="h3-header text-uppercase">Применение самых современных технологий и экологически безопасных препаратов</h1>
     <div class="khimchistka-about">
       <div class="khimchistka-about-top d-flex justify-content-between">
         <p data-aos="fade-right" class="khimchistka-info">Химчистка проводится профессиональным оборудованием
@@ -39,8 +39,8 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/scss/main.scss';
-.khimchistka-header {
-  padding-top: 6rem;
+.khimchistka-middle {
+  padding: 8rem 0;
 }
 .khimchistka-about-top {
   margin: 4rem 0 6rem 0;
