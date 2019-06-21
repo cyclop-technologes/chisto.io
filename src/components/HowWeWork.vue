@@ -6,7 +6,8 @@
         <div class="work-info-left">
           <div data-aos="fade-right" class="block-left-top">
             <h4 class="work-info-header text-uppercase mb-4">что будем убирать?</h4>
-            <p class="work-info-article">Убираем квартиры, частные дома, офисные и коммерческие помещения, помещения после ремонта.
+            <p class="work-info-article">
+              Убираем квартиры, частные дома, офисные и коммерческие помещения, помещения после ремонта.
               Также мы занимаемся химчисткой, моем окна, стираем шторы и чистим фасады.</p>
           </div>
           <div data-aos="fade-right" data-aos-delay="100" class="block-left-bottom">
@@ -21,15 +22,17 @@
         <div class="work-info-right text-right">
           <div data-aos="fade-left" class="block-right-top">
             <h4 class="work-info-header text-uppercase mb-4">чем будем убирать?</h4>
-            <p class="work-info-article">Для уборки мы используем собственное профессиональное оборудование,
-              а также только профессиональные чистящие средства, которые являются гипоаллергенными
-              и не причиняют вреда людям и животным.</p>
+            <p class="work-info-article">
+              Для уборки мы используем собственное профессиональное оборудование,
+              а также только профессиональные чистящие средства, которые являются гипоаллергенными
+              и не причиняют вреда людям и животным.</p>
           </div>
           <div data-aos="fade-left" data-aos-delay="100" class="block-right-bottom">
             <h4 class="work-info-header text-uppercase mb-4">кто будет убирать?</h4>
             <p class="work-info-article">Мы уважаем традиции и уют вашего дома,
               и поэтому подготовили надежных исполнителей,
-              которые прошли три этапа отбора: собеседование, обучение и проверку службой безопасности.</p>
+              которые прошли три этапа отбора:
+              собеседование, обучение и проверку службой безопасности.</p>
           </div>
         </div>
       </div>
@@ -39,7 +42,7 @@
 
 <script>
 export default {
-}
+};
 </script>
 
 <style lang="scss" scoped>

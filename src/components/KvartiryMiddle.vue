@@ -2,7 +2,7 @@
   <div class="text-center">
     <h1 class="h1-header flat-header text-uppercase">сравнить уборку</h1>
     <div class="d-flex justify-content-around">
-      <div class="general-clean">
+      <div data-aos="fade-right" class="general-clean">
         <h4 class="h4-header text-uppercase mt-5 mb-5">генеральная уборка</h4>
         <ul class="text-left general-list">
           <li class="mb-3 pl-5 general-list-item">Выносим мусор</li>
@@ -15,7 +15,7 @@
           <li class="mb-3 pl-5 general-list-item">Пылесосим коврики и моем пол</li>
         </ul>
       </div>
-      <div class="express-clean">
+      <div data-aos="fade-left" class="express-clean">
         <h4 class="h4-header text-uppercase mt-5 mb-5">экспресс уборка</h4>
         <ul class="text-right express-list">
           <li class="mb-3 pr-5 express-list-item">Очищаем все доступные поверхности от пыли и жира</li>

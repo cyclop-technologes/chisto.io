@@ -3,10 +3,11 @@
     <h1 class="h1-header text-uppercase okna-header">оконный клининг</h1>
     <div class="about-windows-cleaning">
       <div class="windows-cleaning-top d-flex justify-content-between">
-        <p data-aos="fade-right" class="windows-cleaning-info">Окна офисов и магазинов — это лицо компании.
+        <p data-aos="fade-right" class="windows-cleaning-info">
+          Окна офисов и магазинов — это лицо компании.
           Здесь требуется прозрачность, блеск и чистота.
           Но справиться с большой площадью стеклянной поверхности без специального оборудования невозможно.
-          Просто руками и тряпкой здесь не обойтись.</p>
+          Просто руками и тряпкой здесь не обойтись.</p>
         <div data-aos="fade-left">
           <h4 class="h4-header text-uppercase mb-4">предоставляемые услуги</h4>
             <ul class="windows-cleaning-list">
