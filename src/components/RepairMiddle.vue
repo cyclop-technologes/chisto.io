@@ -18,16 +18,6 @@
       </b-col>
     </b-row>
   </b-container>
-
-
-    <!-- <div class="d-flex justify-content-center align-items-center text-left mt-5">
-      <div class="left-block">
-
-      </div>
-      <div class="right-block">
-
-      </div>
-    </div> -->
 </template>
 
 <script>
