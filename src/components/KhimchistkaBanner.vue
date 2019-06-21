@@ -63,14 +63,14 @@
 <script>
 export default {
   data() {
-     return {
-       furniture: false,
-       mattress: false,
-       coating: false,
-       other: false
-     }
-   }
-}
+    return {
+      furniture: false,
+      mattress: false,
+      coating: false,
+      other: false,
+    };
+  },
+};
 </script>
 
 <style lang="scss">

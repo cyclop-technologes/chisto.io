@@ -15,7 +15,7 @@ import {
   faBuilding,
   faWindowMaximize,
   faLeaf,
-  faEllipsisH
+  faEllipsisH,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
@@ -32,7 +32,7 @@ library.add(
   faBuilding,
   faWindowMaximize,
   faLeaf,
-  faEllipsisH
+  faEllipsisH,
 );
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 

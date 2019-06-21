@@ -62,47 +62,43 @@
 
 <script>
 export default {
-    data() {
-      return {
-        selected: 'radio1',
-        options: [
-          { text: 'Генеральная', value: 'radio1' },
-          { text: 'Экспресс', value: 'radio2' }
-        ],
-        flats: ['1-х комнатная', '2-х комнатная', '3-х комнатная', '4-х комнатная', '5-х комнатная', 'больше 5-ти комнат'],
-        flatIndex: 0,
-        toilets: ['1 санузел', '2 санузла', '3 санузла', '4 санузла', 'больше 4-х санузлов'],
-        toiletIndex: 0,
-        windows: ['1 окно', '2 окна', '3 окна', '4 окна', '5 окон', '6 окон',' 7 окон', '8 окон', 'больше 8-ми окон'],
-        windowsIndex: 0,
-      };
+  data() {
+    return {
+      selected: 'radio1',
+      options: [
+        { text: 'Генеральная', value: 'radio1' },
+        { text: 'Экспресс', value: 'radio2' },
+      ],
+      flats: ['1-х комнатная', '2-х комнатная', '3-х комнатная', '4-х комнатная', '5-х комнатная', 'больше 5-ти комнат'],
+      flatIndex: 0,
+      toilets: ['1 санузел', '2 санузла', '3 санузла', '4 санузла', 'больше 4-х санузлов'],
+      toiletIndex: 0,
+      windows: ['1 окно', '2 окна', '3 окна', '4 окна', '5 окон', '6 окон', ' 7 окон', '8 окон', 'больше 8-ми окон'],
+      windowsIndex: 0,
+    };
+  },
+  computed: {
+    currentFlat() { return this.flats[this.flatIndex]; },
+    currentToilet() { return this.toilets[this.toiletIndex]; },
+    currentWindows() { return this.windows[this.windowsIndex]; },
+  },
+  methods: {
+    counterAdd(arr, cur) {
+      if (this[cur] < (arr.length - 1)) {
+        this[cur]++;
+      } else {
+        console.log('return');
+      }
     },
-    computed: {
-      currentFlat() { return this.flats[this.flatIndex]},
-      currentToilet() { return this.toilets[this.toiletIndex]},
-      currentWindows() { return this.windows[this.windowsIndex]},
+    counterRem(arr, cur) {
+      if (this[cur] !== 0) {
+        this[cur]--;
+      } else {
+        console.log('return');
+      }
     },
-    methods: {
-      counterAdd(arr, cur) {
-
-        if (this[cur] < (arr.length-1)) {
-          this[cur]++;
-        } else {
-          console.log('return')
-          return
-        }
-      },
-      counterRem(arr, cur) {
-
-        if (this[cur] !== 0) {
-          this[cur]--;
-        } else {
-          console.log('return')
-          return
-        }
-      },
-    },
-  };
+  },
+};
 </script>
 
 <style lang="scss">

@@ -45,6 +45,7 @@ export default {
   margin-top: auto;
   max-width: 100%;
   max-height: 100%;
+  bottom: 0;
 }
 
 </style>

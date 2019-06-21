@@ -49,6 +49,7 @@
 </template>
 <script>
 import HowWeWork from './HowWeWork.vue';
+
 export default {
   data() {
     return {
@@ -62,15 +63,15 @@ export default {
     };
   },
 
-    props: {
-      block: {
-        type: Boolean,
-        default: false,
-      },
+  props: {
+    block: {
+      type: Boolean,
+      default: false,
     },
-    components: {
-      HowWeWork,
-    },
+  },
+  components: {
+    HowWeWork,
+  },
 
 };
 
