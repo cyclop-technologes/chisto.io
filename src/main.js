@@ -9,14 +9,32 @@ import {
   faOdnoklassniki,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
+import {
+  faHome,
+  faPaintRoller,
+  faBuilding,
+  faWindowMaximize,
+  faLeaf,
+  faEllipsisH,
+} from '@fortawesome/free-solid-svg-icons';
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import router from './router';
 import App from './App.vue';
 
-library.add(faInstagram, faVk, faOdnoklassniki, faYoutube);
+library.add(
+  faInstagram,
+  faVk,
+  faOdnoklassniki,
+  faYoutube,
+  faHome,
+  faPaintRoller,
+  faBuilding,
+  faWindowMaximize,
+  faLeaf,
+  faEllipsisH,
+);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
-
 
 AOS.init();
 Vue.use(BootstrapVue);

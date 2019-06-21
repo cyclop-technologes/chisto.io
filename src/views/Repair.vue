@@ -1,7 +1,8 @@
 <template>
   <div class="repair-page position-relative">
-    <Header></Header>
-    <Banner></Banner>
+    <Banner>
+      <RepairBanner></RepairBanner>
+    </Banner>
     <Middle>
       <RepairMiddle></RepairMiddle>
     </Middle>
@@ -11,8 +12,8 @@
 </template>
 
 <script>
-import Header from '../components/Header.vue';
 import Banner from '../components/Banner.vue';
+import RepairBanner from '../components/RepairBanner.vue';
 import Middle from '../components/Middle.vue';
 import RepairMiddle from '../components/RepairMiddle.vue';
 import Footer from '../components/Footer.vue';
@@ -20,8 +21,8 @@ import Footer from '../components/Footer.vue';
 export default {
   name: 'repair',
   components: {
-    Header,
     Banner,
+    RepairBanner,
     Middle,
     Footer,
     RepairMiddle,

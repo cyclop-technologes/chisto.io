@@ -1,7 +1,8 @@
 <template>
   <div class="khimchistka-page position-relative">
-    <Header></Header>
-    <Banner></Banner>
+    <Banner>
+      <KhimchistkaBanner></KhimchistkaBanner>
+    </Banner>
     <Middle>
       <KhimchistkaMiddle></KhimchistkaMiddle>
     </Middle>
@@ -11,8 +12,8 @@
 </template>
 
 <script>
-import Header from '../components/Header.vue';
 import Banner from '../components/Banner.vue';
+import KhimchistkaBanner from '../components/KhimchistkaBanner.vue';
 import Middle from '../components/Middle.vue';
 import KhimchistkaMiddle from '../components/KhimchistkaMiddle.vue';
 import Footer from '../components/Footer.vue';
@@ -20,8 +21,8 @@ import Footer from '../components/Footer.vue';
 export default {
   name: 'khimchistka',
   components: {
-    Header,
     Banner,
+    KhimchistkaBanner,
     Middle,
     Footer,
     KhimchistkaMiddle,

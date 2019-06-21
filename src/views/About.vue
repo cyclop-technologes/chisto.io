@@ -1,6 +1,5 @@
 <template>
   <div class="about-page position-relative">
-    <Header></Header>
     <Banner :footer='false'>
       <AboutBanner></AboutBanner>
     </Banner>
@@ -13,7 +12,6 @@
 </template>
 
 <script>
-import Header from '../components/Header.vue';
 import Banner from '../components/Banner.vue';
 import AboutBanner from '../components/AboutBanner.vue';
 import Middle from '../components/Middle.vue';
@@ -23,7 +21,6 @@ import Footer from '../components/Footer.vue';
 export default {
   name: 'about',
   components: {
-    Header,
     Banner,
     Middle,
     Footer,

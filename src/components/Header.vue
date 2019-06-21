@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="container header-container">
+  <div class="container header-container p-0">
     <b-navbar type="dark" class="pt-3">
       <b-navbar-brand>
           <b-link to="/"><img src="../assets/img/logo.svg"></b-link>

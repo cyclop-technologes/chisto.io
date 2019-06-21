@@ -8,6 +8,7 @@ bla-bla-bla
 
 <script>
 export default {
+
 }
 </script>
 

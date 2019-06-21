@@ -1,7 +1,8 @@
 <template>
   <div class="okna-page position-relative">
-    <Header></Header>
-    <Banner></Banner>
+    <Banner>
+      <OknaBanner></OknaBanner>
+    </Banner>
     <Middle>
       <OknaMiddle></OknaMiddle>
     </Middle>
@@ -11,8 +12,8 @@
 </template>
 
 <script>
-import Header from '../components/Header.vue';
 import Banner from '../components/Banner.vue';
+import OknaBanner from '../components/OknaBanner.vue';
 import Middle from '../components/Middle.vue';
 import OknaMiddle from '../components/OknaMiddle.vue';
 import Footer from '../components/Footer.vue';
@@ -20,8 +21,8 @@ import Footer from '../components/Footer.vue';
 export default {
   name: 'okna',
   components: {
-    Header,
     Banner,
+    OknaBanner,
     Middle,
     Footer,
     OknaMiddle,

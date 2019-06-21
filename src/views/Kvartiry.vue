@@ -1,7 +1,8 @@
 <template>
   <div class="flat-page position-relative">
-    <Header></Header>
-    <Banner></Banner>
+    <Banner>
+      <KvartiryBanner></KvartiryBanner>
+    </Banner>
     <Middle>
       <KvartiryMiddle></KvartiryMiddle>
     </Middle>
@@ -10,8 +11,8 @@
 </template>
 
 <script>
-import Header from '../components/Header.vue';
 import Banner from '../components/Banner.vue';
+import KvartiryBanner from '../components/KvartiryBanner.vue';
 import Middle from '../components/Middle.vue';
 import KvartiryMiddle from '../components/KvartiryMiddle.vue';
 import Footer from '../components/Footer.vue';
@@ -19,8 +20,8 @@ import Footer from '../components/Footer.vue';
 export default {
   name: 'kvartiry',
   components: {
-    Header,
     Banner,
+    KvartiryBanner,
     Middle,
     Footer,
     KvartiryMiddle,
