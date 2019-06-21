@@ -1,12 +1,12 @@
 <template lang="html">
-  <div class="text-center repair-middle">
+  <b-container class="repair-middle text-center">
     <h1 class="h1-header text-uppercase">в чем отличия от обычной уборки</h1>
-    <div class="d-flex justify-content-center align-items-center text-left mt-5">
-      <div class="left-block">
+    <b-row class="middle-container text-left">
+      <b-col cols="12" lg="4">
         <img src="../assets/img/repair-img.png">
-      </div>
-      <div class="right-block">
-        <ul>
+      </b-col>
+      <b-col cols="12" lg="8" class="mt-5">
+        <ul class="pl-0">
           <li class="repair-list-item mb-4">Комплексная очистка помещения и удаление всех следов строительных работ</li>
           <li class="repair-list-item mb-4">Очистка стеклопакетов, рам и подоконников от краски, клея, скотча и строительных смесей</li>
           <li class="repair-list-item mb-4">Обеспыливание и влажная обработка потолков и декорированных стен</li>
@@ -15,9 +15,19 @@
           <li class="repair-list-item mb-4">Обеспыливание и влажная уборка напольных покрытий в несколько этапов</li>
           <li class="repair-list-item mb-4">Снятие защитной пленки с различных поверхностей, а также вынос строительного мусора</li>
         </ul>
+      </b-col>
+    </b-row>
+  </b-container>
+
+
+    <!-- <div class="d-flex justify-content-center align-items-center text-left mt-5">
+      <div class="left-block">
+
       </div>
-    </div>
-  </div>
+      <div class="right-block">
+
+      </div>
+    </div> -->
 </template>
 
 <script>
@@ -29,6 +39,12 @@ export default {
 @import '../assets/scss/main.scss';
 .repair-middle {
   padding: 8rem 0;
+}
+.middle-container {
+  padding-top:: 2.5rem;
+}
+.repair-list-item {
+  font-size: 14px;
 }
 
 .repair-list-item:nth-child(2),
