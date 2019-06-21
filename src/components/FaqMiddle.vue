@@ -1,7 +1,7 @@
 <template lang="html">
-  <div class="faq-page">
+  <div class="faq-middle">
     <div class="container">
-      <h1 class="h1-header faq-header text-uppercase">часто задаваемые вопросы</h1>
+      <h1 class="h1-header text-uppercase">часто задаваемые вопросы</h1>
       <ul class="faq-accordion">
         <li v-for='(item, index) in questions' :key='index' v-b-toggle="`collapse-${index}`" class="faq-accordion-item">
           <p><span class="round-plus">+</span> {{item.title}}</p>
@@ -51,8 +51,8 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/scss/main.scss';
-.faq-header {
-  padding-top: 6rem;
+.faq-middle {
+  padding: 8rem 0;
 }
 .faq-accordion {
   margin-top: 4rem;

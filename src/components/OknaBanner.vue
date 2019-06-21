@@ -3,9 +3,7 @@
     <b-row>
       <b-col data-aos="fade-right" cols="12" lg="5" class="text-white">
         <h1 class="h1-header mb-5 text-uppercase">мытье окон, витражей</h1>
-        <p>Наши клинеры используют специальное оборудование и средства, чтобы достичь идеальной чистоты окон и витражей.
-
-Обратите внимание, мы не моем окна снаружи в зимнее время, а также при температуре ноль градусов и ниже.</p>
+        <p>{{text}}</p>
       </b-col>
       <b-col data-aos="fade-left" cols="12" lg="4" offset-lg="1" class="position-relative">
         <b-form class="bg-white windows-form shadow">
@@ -41,6 +39,7 @@
 export default {
   data() {
     return {
+      text: 'Наши клинеры используют специальное оборудование и средства, чтобы достичь идеальной чистоты окон и витражей. Обратите внимание, мы не моем окна снаружи в зимнее время, а также при температуре ноль градусов и ниже.',
       selected: 'radio1',
       options: [
         { text: 'Окна', value: 'radio1' },

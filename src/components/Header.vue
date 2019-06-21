@@ -30,16 +30,9 @@ export default {
 };
 </script>
 <style lang="scss">
-@import '../assets/scss/main.scss';
-.nav-link {
-  opacity: 1 !important;
-  color: $white !important;
-}
-.header-container {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 9;
-}
+  @import '../assets/scss/main.scss';
+  .nav-link{
+    color: $white !important;
+    opacity: 1 !important;
+  }
 </style>

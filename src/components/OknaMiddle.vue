@@ -1,13 +1,9 @@
 <template lang="html">
-  <div class="container">
-    <h1 class="h1-header text-uppercase okna-header">оконный клининг</h1>
+  <div class="container okna-middle">
+    <h1 class="h1-header text-uppercase">оконный клининг</h1>
     <div class="about-windows-cleaning">
       <div class="windows-cleaning-top d-flex justify-content-between">
-        <p data-aos="fade-right" class="windows-cleaning-info">
-          Окна офисов и магазинов — это лицо компании.
-          Здесь требуется прозрачность, блеск и чистота.
-          Но справиться с большой площадью стеклянной поверхности без специального оборудования невозможно.
-          Просто руками и тряпкой здесь не обойтись.</p>
+        <p data-aos="fade-right" class="windows-cleaning-info">{{text}}</p>
         <div data-aos="fade-left">
           <h4 class="h4-header text-uppercase mb-4">предоставляемые услуги</h4>
             <ul class="windows-cleaning-list">
@@ -21,11 +17,13 @@
       <div class="windows-cleaning-bottom d-flex justify-content-around">
         <div data-aos="fade-right" class="text-center">
             <img src="../assets/img/shield.svg">
-            <p class="mt-2">Работу выполняют<br> высококвалифицированные специалисты</p>
+            <p class="mt-2">Работу выполняют
+              <br> высококвалифицированные специалисты</p>
         </div>
         <div data-aos="fade-left" class="text-center">
             <img src="../assets/img/quality.svg">
-            <p class="mt-2">Высокий уровень обслуживания и <br> европейские стандарты качества</p>
+            <p class="mt-2">Высокий уровень обслуживания и
+              <br> европейские стандарты качества</p>
         </div>
       </div>
     </div>
@@ -34,13 +32,18 @@
 
 <script>
 export default {
+  data() {
+    return {
+      text: 'Окна офисов и магазинов — это лицо компании. Здесь требуется прозрачность, блеск и чистота. Но справиться с большой площадью стеклянной поверхности без специального оборудования невозможно. Просто руками и тряпкой здесь не обойтись.',
+    };
+  },
 };
 </script>
 
 <style lang="scss">
 @import '../assets/scss/main.scss';
-.okna-header {
-  padding-top: 6rem;
+.okna-middle {
+  padding: 8rem 0;
 }
 .windows-cleaning-top {
   margin: 4rem 0 6rem 0;

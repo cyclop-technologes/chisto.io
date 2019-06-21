@@ -1,14 +1,9 @@
 <template lang="html">
-  <div class="container">
-    <h1 class="h3-header text-uppercase khimchistka-header">Применение самых современных технологий и экологически безопасных препаратов</h1>
+  <div class="container khimchistka-middle">
+    <h1 class="h3-header text-uppercase">{{title}}</h1>
     <div class="khimchistka-about">
       <div class="khimchistka-about-top d-flex justify-content-between">
-        <p data-aos="fade-right" class="khimchistka-info">Химчистка проводится профессиональным оборудованием
-          с использованием гипоаллергенных и профессиональных химических средств,
-          которые разрешено использовать пылесосом экстракторным методом:
-          химия наносится на ткань в жидком виде,
-          а после — вакуумом вытягивается вместе с загрязнением.
-Все чистящие средства подбираются на месте с учетом ткани и характера загрязнений.</p>
+        <p data-aos="fade-right" class="khimchistka-info">{{text}}</p>
         <div data-aos="fade-left">
           <h4 class="h4-header text-uppercase mb-4">предоставляемые услуги</h4>
             <ul class="khimchistka-list">
@@ -21,11 +16,13 @@
       <div class="khimchistka-about-bottom d-flex justify-content-around">
         <div data-aos="fade-right" class="text-center">
             <img src="../assets/img/himchistka.svg">
-            <p class="mt-4">Работу выполняют<br> высококвалифицированные специалисты</p>
+            <p class="mt-4">Работу выполняют
+              <br> высококвалифицированные специалисты</p>
         </div>
         <div data-aos="fade-left" class="text-center">
             <img src="../assets/img/quality.svg">
-            <p class="mt-2">Высокий уровень обслуживания и <br> европейские стандарты качества</p>
+            <p class="mt-2">Высокий уровень обслуживания и
+              <br> европейские стандарты качества</p>
         </div>
       </div>
     </div>
@@ -34,13 +31,19 @@
 
 <script>
 export default {
+  data() {
+    return {
+      title: 'Применение самых современных технологий и экологически безопасных препаратов',
+      text: 'Химчистка проводится профессиональным оборудованием с использованием гипоаллергенных и профессиональных химических средств, которые разрешено использовать пылесосом экстракторным методом: химия наносится на ткань в жидком виде, а после — вакуумом вытягивается вместе с загрязнением. Все чистящие средства подбираются на месте с учетом ткани и характера загрязнений.',
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 @import '../assets/scss/main.scss';
-.khimchistka-header {
-  padding-top: 6rem;
+.khimchistka-middle {
+  padding: 8rem 0;
 }
 .khimchistka-about-top {
   margin: 4rem 0 6rem 0;

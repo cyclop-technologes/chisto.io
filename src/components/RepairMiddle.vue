@@ -1,24 +1,27 @@
 <template lang="html">
-  <div class="text-center">
-    <h1 class="h1-header flat-header text-uppercase">в чем отличия от обычной уборки</h1>
-    <div class="d-flex justify-content-center align-items-center text-left mt-5">
-      <div class="left-block">
+  <b-container class="repair-middle text-center">
+    <h1 class="h1-header text-uppercase">в чем отличия от обычной уборки</h1>
+    <b-row class="middle-container text-left">
+      <b-col cols="12" lg="4">
         <img src="../assets/img/repair-img.png">
-      </div>
-      <div class="right-block">
-        <ul>
-          <li v-for="(item, index) in repair" :key="index" class="repair-list-item mb-4">{{item}}</li>
+      </b-col>
+      <b-col cols="12" lg="8" class="mt-5">
+        <ul class="pl-0">
+          <li
+            v-for='(item, index) in list'
+            :key='index'
+            class="repair-list-item mb-4">{{item}}</li>
         </ul>
-      </div>
-    </div>
-  </div>
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      repair: [
+      list: [
         'Комплексная очистка помещения и удаление всех следов строительных работ',
         'Очистка стеклопакетов, рам и подоконников от краски, клея, скотча и строительных смесей',
         'Обеспыливание и влажная обработка потолков и декорированных стен',
@@ -34,6 +37,15 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/scss/main.scss';
+.repair-middle {
+  padding: 8rem 0;
+}
+.middle-container {
+  padding-top:: 2.5rem;
+}
+.repair-list-item {
+  font-size: 14px;
+}
 
 .repair-list-item:nth-child(2),
 .repair-list-item:nth-child(6) {

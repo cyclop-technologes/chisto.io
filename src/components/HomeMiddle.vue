@@ -5,7 +5,7 @@
         <b-col cols="12" lg="3">
           <h1 class="h1-header text-uppercase mb-5">{{current.title}}</h1>
           <p>{{current.body}}</p>
-            <b-button :to="current.link" class="text-uppercase w-100">
+            <b-button :to="current.link" class="text-uppercase w-100 home-button">
                 заказать
             </b-button>
         </b-col>
@@ -105,6 +105,9 @@ export default {
 .home-middle {
   padding: 8rem 0;
   background: linear-gradient(to right, $white 0%, $white 50%, $primary 50%, $primary 100%);
+}
+.home-button {
+  margin-top: 6rem;
 }
 .home-radio {
 }
