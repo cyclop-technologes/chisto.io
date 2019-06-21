@@ -1,7 +1,9 @@
 <template>
   <div class="home-page position-relative">
     <Banner :footer='false'>
-      <img class="home-banner-image" src="../assets/img/banner-image.svg">
+      <div class="container image-container">
+        <img class="home-banner-image" src="../assets/img/banner-image.svg">
+      </div>
       <HomeBanner></HomeBanner>
     </Banner>
     <Middle>
@@ -30,15 +32,19 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../assets/scss/main.scss';
 .home-page {
-
+}
+.image-container {
+  flex: 100%;
+  position: relative;
 }
 .home-banner-image {
-  margin-top: -110px;
-  height: 100%;
-  object-fit: contain;
+  position: absolute;
+  margin-top: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 </style>
