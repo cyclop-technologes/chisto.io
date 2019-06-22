@@ -57,6 +57,9 @@ export default {
 .faq-accordion {
   margin-top: 4rem;
 }
+.faq-accordion-item {
+  cursor: pointer;
+}
 .round-plus {
   background-color: $primary;
   width: 20px;
