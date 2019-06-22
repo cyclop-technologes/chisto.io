@@ -1,11 +1,19 @@
 <template>
   <div class="mobile-application">
     <div class="container h-100 d-flex align-items-center positov-relative">
-      <div class="mobile-phone"><img src="../assets/img/iPhone_X.png"></div>
-      <div class="application-header"><p class="text-uppercase">Приложение "ЧИСТО" создано для вашего удобства</p></div>
+      <div class="mobile-phone">
+        <img src="../assets/img/iPhone_X.png">
+      </div>
+      <div class="application-header">
+        <p class="text-uppercase">Приложение "ЧИСТО" создано для вашего удобства</p>
+      </div>
       <div class="application-download">
-        <button class="application-button"><img src="../assets/img/google-play.svg"></button>
-        <button class="application-button"><img src="../assets/img/app-store.svg"></button>
+        <button class="application-button">
+          <img src="../assets/img/google-play.svg">
+        </button>
+        <button class="application-button">
+          <img src="../assets/img/app-store.svg">
+        </button>
       </div>
     </div>
   </div>

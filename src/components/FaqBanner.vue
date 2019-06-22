@@ -3,8 +3,7 @@
     <b-row>
       <b-col data-aos="fade-right" cols="12" lg="7">
         <h1 class="text-uppercase text-white mb-5">часто задаваемые вопросы</h1>
-        <p class='text-white'>Если вы не нашли ответ на свой вопрос, отправьте его нам.
-          Мы постараемся оперативно связаться с вами и на все ответить.</p>
+        <p class='text-white'>{{text}}</p>
       </b-col>
       <b-col data-aos="fade-left" cols="12" lg="5" class="ml-auto">
         <b-form class="bg-white form shadow">
@@ -31,7 +30,12 @@
 
 <script>
 export default {
-}
+  data() {
+    return {
+      text: 'Если вы не нашли ответ на свой вопрос, отправьте его нам. Мы постараемся оперативно связаться с вами и на все ответить.',
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>

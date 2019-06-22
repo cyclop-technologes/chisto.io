@@ -1,40 +1,63 @@
 <template lang="html">
   <div class="home-banner-footer">
-    <h4 class="h4-header text-uppercase text-center text-white mb-3">что вам нужно убрать?</h4>
-    <div class="d-flex justify-content-center align-items-center text-white">
+    <h4 class="h4-header
+      text-uppercase
+      text-center
+      text-white
+      mb-3">что вам нужно убрать?</h4>
+    <div class="d-flex
+      justify-content-center
+      align-items-center
+      text-white">
       <b-link to="/kvartiry">
         <div class="banner-footer-item mr-2">
-          <div class="text-right"><font-awesome-icon icon='home'/></div>
-          <div class="text-left">Дом<br> квартира</div>
+          <div class="text-right">
+            <font-awesome-icon icon='home'/>
+          </div>
+          <div class="text-left">Дом
+            <br> квартира</div>
         </div>
       </b-link>
       <b-link to="/repair">
         <div class="banner-footer-item mr-2">
-          <div class="text-right"><font-awesome-icon icon='paint-roller'/></div>
-          <div class="text-left">После<br> ремонта</div>
+          <div class="text-right">
+            <font-awesome-icon icon='paint-roller'/>
+          </div>
+          <div class="text-left">После
+            <br> ремонта</div>
         </div>
       </b-link>
       <b-link to="/okna">
         <div class="banner-footer-item mr-2">
-          <div class="text-right"><font-awesome-icon icon='window-maximize'/></div>
-          <div class="text-left">Окна<br> Витражи</div>
+          <div class="text-right">
+            <font-awesome-icon icon='window-maximize'/>
+          </div>
+          <div class="text-left">Окна
+            <br> Витражи</div>
         </div>
       </b-link>
       <b-link to="/office">
         <div class="banner-footer-item mr-2">
-          <div class="text-right"><font-awesome-icon icon='building'/></div>
-          <div class="text-left">Офисы<br> Коммерция</div>
+          <div class="text-right">
+            <font-awesome-icon icon='building'/>
+          </div>
+          <div class="text-left">Офисы
+            <br> Коммерция</div>
         </div>
       </b-link>
       <b-link to="/khimchistka">
         <div class="banner-footer-item mr-2">
-          <div class="text-right"><font-awesome-icon icon='leaf'/></div>
+          <div class="text-right">
+            <font-awesome-icon icon='leaf'/>
+          </div>
           <div class="text-left">Химчистка</div>
         </div>
       </b-link>
       <b-link to="/other">
         <div class="banner-footer-item">
-          <div class="text-right"><font-awesome-icon icon='ellipsis-h'/></div>
+          <div class="text-right">
+            <font-awesome-icon icon='ellipsis-h'/>
+          </div>
           <div class="text-left">Другое</div>
         </div>
       </b-link>
@@ -44,7 +67,7 @@
 
 <script>
 export default {
-}
+};
 </script>
 
 <style lang="scss" scoped>

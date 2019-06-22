@@ -3,10 +3,7 @@
     <b-row>
       <b-col data-aos="fade-right" cols="12" lg="5" class="text-white">
         <h1 class="h1-header mb-5 text-uppercase">уборка квартир и домов</h1>
-        <p>Вы можете воспользоваться нашими услугами и заказать поддерживающую или генеральную уборку.
-          От выбранной вами услуги зависит оборудование, с которым приедет клинер.
-Для расчета стоимости больших площадей вы можете бесплатно вызвать специалиста по оценке:
-представитель компании озвучит точную стоимость уборки на месте.</p>
+        <p>{{text}}</p>
       </b-col>
       <b-col data-aos="fade-left" cols="12" lg="4" offset-lg="1" class="position-relative">
         <b-form class="bg-white kvartiry-form shadow">
@@ -29,19 +26,43 @@
          >
          </b-form-input>
          <div class="position-relative bg-white border-primary rounded-pill my-3">
-           <b-button @click="counterRem(flats, 'flatIndex')" class="ml-2 p-0 prev-step-btn step-btn"  variant="primary" href="">-</b-button>
+           <b-button
+             @click="counterRem(flats, 'flatIndex')"
+             class="ml-2 p-0 prev-step-btn step-btn"
+             variant="primary"
+             href="">-</b-button>
            <div class="text-center">{{currentFlat}}</div>
-          <b-button @click="counterAdd(flats, 'flatIndex')" class="mr-2 p-0 next-step-btn step-btn"  variant="primary" href="">+</b-button>
+          <b-button
+            @click="counterAdd(flats, 'flatIndex')"
+            class="mr-2 p-0 next-step-btn step-btn"
+            variant="primary"
+            href="">+</b-button>
          </div>
          <div class="position-relative bg-white border-primary rounded-pill my-3">
-           <b-button @click="counterRem(toilets, 'toiletIndex')" class="ml-2 p-0 prev-step-btn step-btn"  variant="primary" href="">-</b-button>
+           <b-button
+             @click="counterRem(toilets, 'toiletIndex')"
+             class="ml-2 p-0 prev-step-btn step-btn"
+             variant="primary"
+             href="">-</b-button>
            <div class="text-center">{{currentToilet}}</div>
-          <b-button @click="counterAdd(toilets, 'toiletIndex')" class="mr-2 p-0 next-step-btn step-btn"  variant="primary" href="">+</b-button>
+          <b-button
+            @click="counterAdd(toilets, 'toiletIndex')"
+            class="mr-2 p-0 next-step-btn step-btn"
+            variant="primary"
+            href="">+</b-button>
          </div>
          <div class="position-relative bg-white border-primary rounded-pill my-3">
-           <b-button @click="counterRem(windows, 'windowsIndex')" class="ml-2 p-0 prev-step-btn step-btn"  variant="primary" href="">-</b-button>
+           <b-button
+             @click="counterRem(windows, 'windowsIndex')"
+             class="ml-2 p-0 prev-step-btn step-btn"
+             variant="primary"
+             href="">-</b-button>
            <div class="text-center">{{currentWindows}}</div>
-          <b-button @click="counterAdd(windows, 'windowsIndex')" class="mr-2 p-0 next-step-btn step-btn"  variant="primary" href="">+</b-button>
+          <b-button
+            @click="counterAdd(windows, 'windowsIndex')"
+            class="mr-2 p-0 next-step-btn step-btn"
+            variant="primary"
+            href="">+</b-button>
          </div>
            <b-form-input
               class="text-center rounded-pill mb-4 border-primary"
@@ -54,7 +75,7 @@
               Рассчитать стоимость
           </b-button>
         </b-form>
-        <img class="kvartiry-img" src="../assets/img/cleaner-kvartiry.svg">
+        <img class="kvartiry-img" src="../assets/img/cleaner-kvartiry.svg"/>
       </b-col>
     </b-row>
   </b-container>
@@ -62,47 +83,44 @@
 
 <script>
 export default {
-    data() {
-      return {
-        selected: 'radio1',
-        options: [
-          { text: 'Генеральная', value: 'radio1' },
-          { text: 'Экспресс', value: 'radio2' }
-        ],
-        flats: ['1-х комнатная', '2-х комнатная', '3-х комнатная', '4-х комнатная', '5-х комнатная', 'больше 5-ти комнат'],
-        flatIndex: 0,
-        toilets: ['1 санузел', '2 санузла', '3 санузла', '4 санузла', 'больше 4-х санузлов'],
-        toiletIndex: 0,
-        windows: ['1 окно', '2 окна', '3 окна', '4 окна', '5 окон', '6 окон',' 7 окон', '8 окон', 'больше 8-ми окон'],
-        windowsIndex: 0,
-      };
+  data() {
+    return {
+      text: 'Вы можете воспользоваться нашими услугами и заказать поддерживающую или генеральную уборку. От выбранной вами услуги зависит оборудование, с которым приедет клинер. Для расчета стоимости больших площадей вы можете бесплатно вызвать специалиста по оценке: представитель компании озвучит точную стоимость уборки на месте.',
+      selected: 'radio1',
+      options: [
+        { text: 'Генеральная', value: 'radio1' },
+        { text: 'Экспресс', value: 'radio2' },
+      ],
+      flats: ['1-х комнатная', '2-х комнатная', '3-х комнатная', '4-х комнатная', '5-х комнатная', 'больше 5-ти комнат'],
+      flatIndex: 0,
+      toilets: ['1 санузел', '2 санузла', '3 санузла', '4 санузла', 'больше 4-х санузлов'],
+      toiletIndex: 0,
+      windows: ['1 окно', '2 окна', '3 окна', '4 окна', '5 окон', '6 окон', ' 7 окон', '8 окон', 'больше 8-ми окон'],
+      windowsIndex: 0,
+    };
+  },
+  computed: {
+    currentFlat() { return this.flats[this.flatIndex]; },
+    currentToilet() { return this.toilets[this.toiletIndex]; },
+    currentWindows() { return this.windows[this.windowsIndex]; },
+  },
+  methods: {
+    counterAdd(arr, cur) {
+      if (this[cur] < (arr.length - 1)) {
+        this[cur]++;
+      } else {
+        console.log('return');
+      }
     },
-    computed: {
-      currentFlat() { return this.flats[this.flatIndex]},
-      currentToilet() { return this.toilets[this.toiletIndex]},
-      currentWindows() { return this.windows[this.windowsIndex]},
+    counterRem(arr, cur) {
+      if (this[cur] !== 0) {
+        this[cur]--;
+      } else {
+        console.log('return');
+      }
     },
-    methods: {
-      counterAdd(arr, cur) {
-
-        if (this[cur] < (arr.length-1)) {
-          this[cur]++;
-        } else {
-          console.log('return')
-          return
-        }
-      },
-      counterRem(arr, cur) {
-
-        if (this[cur] !== 0) {
-          this[cur]--;
-        } else {
-          console.log('return')
-          return
-        }
-      },
-    },
-  };
+  },
+};
 </script>
 
 <style lang="scss">
