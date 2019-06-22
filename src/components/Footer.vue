@@ -83,7 +83,6 @@ export default {
   background: url('../assets/img/bg-footer.svg') no-repeat;
   background-size: cover;
 }
-
 .footer-container {
   background-color: $secondary;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
@@ -93,8 +92,6 @@ export default {
 .footer-logo {
   margin: 6.25rem 0rem;
 }
-
-
 .contacts {
   text-align: center;
   color: $white;
@@ -115,7 +112,6 @@ export default {
   color: $white;
   font-weight: normal;
 }
-
 .links-padding {
   a {
     padding: 0.5rem 0.5rem;
@@ -129,8 +125,5 @@ export default {
       opacity: 1;
     }
   }
-
 }
-
-
 </style>
