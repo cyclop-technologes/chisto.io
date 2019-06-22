@@ -4,18 +4,19 @@
     <div class="about-windows-cleaning">
       <div class="windows-cleaning-top d-flex justify-content-between">
         <p data-aos="fade-right" class="windows-cleaning-info">
-          Окна офисов и магазинов — это лицо компании.
-          Здесь требуется прозрачность, блеск и чистота.
-          Но справиться с большой площадью стеклянной поверхности без специального оборудования невозможно.
-          Просто руками и тряпкой здесь не обойтись.</p>
+          Окна офисов и магазинов - это лицо компании.
+          Здесь требуется прозрачность, блеск и чистота.
+          Но справиться с большой площадью стеклянной поверхности
+          без специального оборудования невозможно.
+          Просто руками и тряпкой здесь не обойтись.</p>
         <div data-aos="fade-left">
           <h4 class="h4-header text-uppercase mb-4">предоставляемые услуги</h4>
-            <ul class="windows-cleaning-list">
-              <li class="cleaning-list-item mb-3">Моем фасады</li>
-              <li class="cleaning-list-item mb-3">Моем витрины</li>
-              <li class="cleaning-list-item mb-3">Моем витражи</li>
-              <li class="cleaning-list-item mb-3">Моем окна</li>
-            </ul>
+          <ul class="windows-cleaning-list">
+            <li class="cleaning-list-item mb-3">Моем фасады</li>
+            <li class="cleaning-list-item mb-3">Моем витрины</li>
+            <li class="cleaning-list-item mb-3">Моем витражи</li>
+            <li class="cleaning-list-item mb-3">Моем окна</li>
+          </ul>
         </div>
       </div>
       <div class="windows-cleaning-bottom d-flex justify-content-around">
@@ -50,7 +51,6 @@ export default {
   font-size: 16px;
   line-height: 30px;
 }
-
 .windows-cleaning-list {
   position: relative;
   &:before {
