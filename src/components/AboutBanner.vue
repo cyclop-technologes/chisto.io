@@ -6,7 +6,7 @@
         <p v-for='(item, index) in about' :key='index'>{{item}}</p>
       </b-col>
       <b-col data-aos="fade-left" class="ml-auto" cols="12" lg="3">
-        <img src="../assets/img/cleaner-about.svg">
+        <img class="about-banner-image" src="../assets/img/cleaner-about.svg">
       </b-col>
     </b-row>
   </b-container>
@@ -27,4 +27,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/scss/main.scss';
+.about-banner-image {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
 </style>
