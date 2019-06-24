@@ -39,6 +39,7 @@ export default {
 .image-container {
   flex: 100%;
   position: relative;
+  max-width: 100%;
 }
 .home-banner-image {
   position: absolute;

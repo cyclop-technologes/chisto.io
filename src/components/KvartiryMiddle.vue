@@ -62,7 +62,7 @@ export default {
   position: relative;
   &:before {
     content: "";
-    height: 280px;
+    height: 90%;
     width: 2px;
     background: $primary;
     position: absolute;
@@ -88,7 +88,7 @@ export default {
   position: relative;
   &:after {
     content: "";
-    height: 280px;
+    height: 90%;
     width: 2px;
     background: $primary;
     position: absolute;
