@@ -13,7 +13,7 @@
               <li><a href="http://www.chisto.io"><img src="../assets/img/whatsapp.svg"></a></li>
             </ul>
           </div>
-          <div class="col-2 mt-2">
+          <div class="col-12 col-lg-2 mt-2">
             <h4 class="footer-title">Следите за нами:</h4>
               <b-nav class="links-padding">
                 <b-nav-item>
@@ -30,11 +30,11 @@
                 </b-nav-item>
               </b-nav>
           </div>
-          <div class="col-2 mt-2">
+          <div class="col-12 col-lg-2 mt-2">
             <h4 class="footer-title">Принимаем к оплате:</h4>
             <div class="payment-img"><img src="../assets/img/payment.svg"></div>
           </div>
-          <div class="col">
+          <div class="col-12 col-lg">
             <b-nav class="footer-menu links-padding justify-content-end">
                 <b-nav-item class="text-uppercase" v-for="(item, key) in footLinks"  :key="key" :to="key">
                     {{item}}

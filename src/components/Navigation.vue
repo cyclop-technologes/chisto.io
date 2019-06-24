@@ -9,7 +9,7 @@
       nav-list
       text-white
       flex-wrap">
-        <b-link v-for="(item,key) in navItems" :to="`/${key}`" class="banner-footer-item mr-2 mb-4">
+        <b-link v-for="(item,key) in navItems" :key='key' :to="`/${key}`" class="banner-footer-item mr-2 mb-4">
             <div class="text-right">
               <font-awesome-icon :icon="item.icon"/>
             </div>
