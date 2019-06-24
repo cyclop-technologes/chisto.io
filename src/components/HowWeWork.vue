@@ -48,14 +48,13 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/scss/main.scss';
 .work-container {
+  padding: 6rem 0;
   background-color: $secondary;
-  height: 100vh;
   color: $white;
 }
 .hww-header {
-  padding-top: 100px;
   padding-left: 40px;
-  margin-bottom: 8rem;
+  margin-bottom: 6rem;
 }
 .work-info-left {
   margin-left: 2rem;
@@ -66,6 +65,11 @@ export default {
 .block-left-bottom,
 .block-right-bottom {
   margin-top: 10rem;
+}
+.work-info-center {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
 }
 .work-info-image {
   width: 350px;

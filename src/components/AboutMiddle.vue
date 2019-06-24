@@ -1,14 +1,14 @@
 <template lang="html">
   <div class="container about-middle-container text-center">
     <h1 class="text-uppercase h1-header mb-4">почему нам доверяют</h1>
-    <div class="about-info d-flex flex-row">
-      <b-col v-for='(item, index) in about' :key="index" cols="12" lg="4">
+    <div class="about-info d-flex flex-row justify-content-center flex-wrap">
+      <b-col v-for='(item, index) in about' :key="index" cols="12" lg="4" md="8" class="mb-3">
         <div
           data-aos="fade-up"
           class="about-info-item
             d-flex
             mt-5
-            flex-column
+            flex-column flex-row-md
             align-items-center
             justify-content-center">
           <h3 class="h3-header pt-4 pb-4">{{item.title}}</h3>
@@ -56,6 +56,9 @@ export default {
   box-shadow: 0px 6px 26px rgba(0, 0, 0, 0.2);
   width: 100%;
   height: 100%;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 3.5rem;
+  }
 }
 .info-item-text {
   padding: 0px 31px 60px 31px;

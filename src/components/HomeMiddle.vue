@@ -2,7 +2,7 @@
   <div class="home-middle">
     <b-container>
       <b-row>
-        <b-col cols="12" lg="3" class="d-flex flex-column">
+        <b-col cols="12" lg="3" class="items-description d-flex flex-column">
           <h1 class="h1-header text-uppercase mb-5">{{current.title}}</h1>
           <p>{{current.body}}</p>
             <b-button :to="current.link" class="text-uppercase w-100 home-button mt-auto mb-5">
@@ -10,18 +10,25 @@
             </b-button>
         </b-col>
         <b-col cols="12" lg="9">
-          <b-form-group class="home-radio-group">
-            <b-form-radio-group
-              class="home-radio shadow"
-              id="btn-radios-2"
-              v-model="selected"
-              :options="options"
-              buttons
-              size="sm"
-              name="radio-btn-outline"
-            ></b-form-radio-group>
-          </b-form-group>
-          <img class="home-img rounded shadow" :src="current.img">
+          <b-row class="mb-4 mb-lg-0">
+            <b-col cols='4' md='3' lg='12'>
+              <b-form-group class="home-radio-group">
+                <b-form-radio-group
+                class="home-radio shadow"
+                id="btn-radios-2"
+                v-model="selected"
+                :options="options"
+                buttons
+                :stacked='screenWidth <= 991'
+                size="sm"
+                name="radio-btn-outline"
+                ></b-form-radio-group>
+              </b-form-group>
+            </b-col>
+            <b-col cols='8' md='9' lg='12'>
+              <img class="home-img rounded shadow" :src="current.img">
+            </b-col>
+          </b-row>
         </b-col>
       </b-row>
     </b-container>
@@ -84,6 +91,7 @@ export default {
         },
       ],
       selected: 0,
+      screenWidth: 0,
     };
   },
   computed: {
@@ -96,6 +104,18 @@ export default {
         value: i,
       }));
     },
+  },
+  methods: {
+    handleResize() {
+      this.screenWidth = window.innerWidth;
+    },
+  },
+  created() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+  },
+  destroyed() {
+    window.removeEventListener('resize', this.handleResize);
   },
 };
 </script>
@@ -114,13 +134,25 @@ export default {
     cursor: pointer;
   }
 }
+.items-description{
+  @include media-breakpoint-down(md) {
+    order: 2;
+  }
+}
 .home-img {
+  margin: 0 auto;
   width: 100%;
   height: 480px;
   object-fit: cover;
   object-position: center;
+  @include media-breakpoint-down(md){
+    height: 100%;
+  };
 }
 .home-radio-group {
+  @include media-breakpoint-down(md) {
+    margin-bottom: 0 !important;
+  }
   .btn {
     display: flex;
     align-items: center;

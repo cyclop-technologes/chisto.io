@@ -1,11 +1,11 @@
 <template lang="html">
   <b-container class="my-auto">
     <b-row>
-      <b-col data-aos="fade-right" cols="12" lg="5" class="text-white">
+      <b-col data-aos="fade-right" cols="12" lg="5" md="6" class="text-white">
         <h1 class="h1-header mb-5 text-uppercase">уборка квартир и домов</h1>
         <p>{{text}}</p>
       </b-col>
-      <b-col data-aos="fade-left" cols="12" lg="4" offset-lg="1" class="position-relative">
+      <b-col data-aos="fade-left" cols="12" lg="4" md="6" offset-lg="1" class="position-relative">
         <b-form class="bg-white kvartiry-form shadow">
           <b-form-group class="radio-input">
             <b-form-radio-group
@@ -25,7 +25,7 @@
              placeholder="Введите площадь"
          >
          </b-form-input>
-         <div class="position-relative bg-white border-primary rounded-pill my-3">
+         <div class="position-relative bg-white flat-input my-3">
            <b-button
              @click="counterRem(flats, 'flatIndex')"
              class="ml-2 p-0 prev-step-btn step-btn"
@@ -38,7 +38,7 @@
             variant="primary"
             href="">+</b-button>
          </div>
-         <div class="position-relative bg-white border-primary rounded-pill my-3">
+         <div class="position-relative bg-white flat-input my-3">
            <b-button
              @click="counterRem(toilets, 'toiletIndex')"
              class="ml-2 p-0 prev-step-btn step-btn"
@@ -51,7 +51,7 @@
             variant="primary"
             href="">+</b-button>
          </div>
-         <div class="position-relative bg-white border-primary rounded-pill my-3">
+         <div class="position-relative bg-white flat-input my-3">
            <b-button
              @click="counterRem(windows, 'windowsIndex')"
              class="ml-2 p-0 prev-step-btn step-btn"
@@ -127,13 +127,26 @@ export default {
 @import '../assets/scss/main.scss';
 .kvartiry-form {
   border-radius: 2.5rem;
-  padding: 2.5rem;
+  padding: 2rem;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 2rem;
+  }
 }
 .kvartiry-img {
   position: absolute;
   right: calc(5rem - 100%);
   top: 50%;
   transform: translateY(-50%);
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+.flat-input {
+  div {
+    border: solid 1px $primary;
+    padding: 0.5rem;
+    @extend .rounded-pill;
+  }
 }
 .step-btn {
   position: absolute;
