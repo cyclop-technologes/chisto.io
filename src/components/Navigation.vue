@@ -5,7 +5,7 @@
       text-center
       text-white
       mb-3">что вам нужно убрать?</h4>
-    <div class="
+    <b-container class="
       nav-list
       text-white
       flex-wrap">
@@ -15,7 +15,7 @@
             </div>
             <div class="text-left" v-html="item.title"></div>
         </b-link>
-    </div>
+    </b-container>
   </div>
 </template>
 
@@ -78,6 +78,10 @@ export default {
   justify-content: space-between;
   flex-direction: column;
   padding: 1rem;
+  @include media-breakpoint-down(md) {
+      flex: 25%;
+      margin: 1rem !important;
+  }
   &:hover {
     background-color: $white;
   }

@@ -77,9 +77,9 @@ export default {
 @import '../assets/scss/main.scss';
 .khim-form {
   border-radius: 2.5rem;
-  padding: 2.5rem;
+  padding: 2rem;
   @include media-breakpoint-down(md) {
-    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }
 .khim-textarea {

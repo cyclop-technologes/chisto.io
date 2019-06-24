@@ -53,7 +53,7 @@ export default {
 @import '../assets/scss/main.scss';
 .windows-form {
   border-radius: 2.5rem;
-  padding: 2.5rem;
+  padding: 2rem;
   @include media-breakpoint-down(md) {
     margin-bottom: 2rem;
   }

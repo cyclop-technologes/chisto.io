@@ -2,10 +2,10 @@
   <b-container class="repair-middle text-center">
     <h1 class="h1-header text-uppercase">в чем отличия от обычной уборки</h1>
     <b-row class="middle-container text-left">
-      <b-col cols="12" lg="4">
+      <b-col cols="12" lg="4" md="12" class="text-center">
         <img src="../assets/img/repair-img.png">
       </b-col>
-      <b-col cols="12" lg="8" class="mt-5">
+      <b-col cols="12" lg="8" md="12" class="mt-5">
         <ul class="pl-0">
           <li
             v-for='(item, index) in list'
@@ -59,6 +59,12 @@ export default {
 
 .repair-list-item:nth-child(4) {
   margin-left: 90px;
+}
+
+@include media-breakpoint-down(md) {
+  .repair-list-item {
+    margin-left: 0 !important;
+  }
 }
 
 

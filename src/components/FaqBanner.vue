@@ -1,11 +1,11 @@
 <template lang="html">
   <b-container class="my-auto">
     <b-row>
-      <b-col data-aos="fade-right" cols="12" lg="7">
+      <b-col data-aos="fade-right" cols="12" lg="7" md="6">
         <h1 class="text-uppercase text-white mb-5">часто задаваемые вопросы</h1>
         <p class='text-white'>{{text}}</p>
       </b-col>
-      <b-col data-aos="fade-left" cols="12" lg="5" class="ml-auto">
+      <b-col data-aos="fade-left" cols="12" lg="5" md="6" class="ml-auto">
         <b-form class="bg-white form shadow">
           <b-form-textarea
             rows="5"
@@ -14,7 +14,6 @@
           </b-form-textarea>
            <b-form-input
               class="text-center rounded-pill mb-4 border-primary"
-              v-model="text"
               type="tel"
               placeholder="+7(_ _ _)_ _ _ _ _ _ _"
           ></b-form-input>
@@ -42,7 +41,8 @@ export default {
 @import '../assets/scss/main.scss';
 .form {
   border-radius: 2.5rem;
-  padding: 2.5rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
 }
 .textarea {
   border-radius: 2rem;

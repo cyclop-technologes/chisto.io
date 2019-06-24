@@ -25,7 +25,7 @@
              placeholder="Введите площадь"
          >
          </b-form-input>
-         <div class="position-relative bg-white border-primary rounded-pill my-3">
+         <div class="position-relative bg-white flat-input my-3">
            <b-button
              @click="counterRem(flats, 'flatIndex')"
              class="ml-2 p-0 prev-step-btn step-btn"
@@ -38,7 +38,7 @@
             variant="primary"
             href="">+</b-button>
          </div>
-         <div class="position-relative bg-white border-primary rounded-pill my-3">
+         <div class="position-relative bg-white flat-input my-3">
            <b-button
              @click="counterRem(toilets, 'toiletIndex')"
              class="ml-2 p-0 prev-step-btn step-btn"
@@ -51,7 +51,7 @@
             variant="primary"
             href="">+</b-button>
          </div>
-         <div class="position-relative bg-white border-primary rounded-pill my-3">
+         <div class="position-relative bg-white flat-input my-3">
            <b-button
              @click="counterRem(windows, 'windowsIndex')"
              class="ml-2 p-0 prev-step-btn step-btn"
@@ -127,13 +127,26 @@ export default {
 @import '../assets/scss/main.scss';
 .kvartiry-form {
   border-radius: 2.5rem;
-  padding: 2.5rem;
+  padding: 2rem;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 2rem;
+  }
 }
 .kvartiry-img {
   position: absolute;
   right: calc(5rem - 100%);
   top: 50%;
   transform: translateY(-50%);
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+.flat-input {
+  div {
+    border: solid 1px $primary;
+    padding: 0.5rem;
+    @extend .rounded-pill;
+  }
 }
 .step-btn {
   position: absolute;
