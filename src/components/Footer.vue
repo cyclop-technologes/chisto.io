@@ -3,7 +3,7 @@
     <HowWeWork v-if="block"></HowWeWork>
     <b-container class="footer-container">
       <div class="border-bottom pt-5 mb-3"></div>
-      <b-row>
+      <b-row class="text-center">
         <b-col cols="12" lg="2" md="3">
           <ul class="contacts">
             <li><h4 class="footer-title">Звоните-пишите:</h4></li>
@@ -14,7 +14,7 @@
         </b-col>
         <b-col cols="12" lg="2" md="3">
           <h4 class="footer-title">Следите за нами:</h4>
-            <b-nav class="links-padding">
+            <b-nav class="links-padding text-center">
               <b-nav-item>
                 <font-awesome-icon :icon="['fab', 'instagram']" />
               </b-nav-item>
@@ -33,8 +33,8 @@
           <h4 class="footer-title">Принимаем к оплате:</h4>
           <div class="payment-img"><img src="../assets/img/payment.svg"></div>
         </b-col>
-        <b-col cols="12" lg="6" md="2" offset-md="1">
-          <b-nav class="footer-menu links-padding justify-content-end mb-2">
+        <b-col cols="12" lg="6" md="2" offset-md="1" offset-lg="0">
+          <b-nav class="footer-menu links-padding mb-2">
               <b-nav-item class="text-uppercase" v-for="(item, key) in footLinks"  :key="key" :to="key">
                   {{item}}
               </b-nav-item>
@@ -113,8 +113,14 @@ export default {
   li {
     cursor: pointer;
   }
+  @include media-breakpoint-down(md) {
+    display: flex;
+    justify-content: center !important;
+  }
 }
 .links-padding {
+  display: flex;
+  justify-content: center;
   a {
     padding: 0rem 0.5rem;
   }
