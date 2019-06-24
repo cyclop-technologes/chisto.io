@@ -19,7 +19,7 @@
                 v-model="selected"
                 :options="options"
                 buttons
-                :stacked='screenWidth <= 768'
+                :stacked='screenWidth <= 991'
                 size="sm"
                 name="radio-btn-outline"
                 ></b-form-radio-group>
