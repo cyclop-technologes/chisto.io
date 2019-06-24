@@ -115,6 +115,7 @@ export default {
   }
 }
 .home-img {
+  margin: 0 auto;
   width: 100%;
   height: 480px;
   object-fit: cover;
