@@ -1,11 +1,11 @@
 <template lang="html">
   <b-container class="my-auto">
     <b-row>
-      <b-col data-aos="fade-right" cols="12" lg="5" class="text-white">
+      <b-col data-aos="fade-right" cols="12" lg="5" md="6" class="text-white">
         <h1 class="h1-header mb-5 text-uppercase">химчистка</h1>
         <p>{{text}}</p>
       </b-col>
-      <b-col data-aos="fade-left" cols="12" lg="4" offset-lg="1" class="position-relative">
+      <b-col data-aos="fade-left" cols="12" lg="4" md="6" offset-lg="1" class="position-relative">
         <b-form class="bg-white khim-form shadow">
           <div class="d-flex flex-wrap justify-content-between">
             <b-form-checkbox
@@ -44,7 +44,6 @@
           </b-form-textarea>
            <b-form-input
               class="text-center rounded-pill mb-4 border-primary"
-              v-model="text"
               type="tel"
               placeholder="+7(_ _ _)_ _ _ _ _ _ _"
           >
@@ -79,6 +78,9 @@ export default {
 .khim-form {
   border-radius: 2.5rem;
   padding: 2.5rem;
+  @include media-breakpoint-down(md) {
+    margin-top: 2rem;
+  }
 }
 .khim-textarea {
   border-radius: 2rem !important;
@@ -96,5 +98,8 @@ export default {
   right: calc(5rem - 100%);
   top: 50%;
   transform: translateY(-50%);
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
 }
 </style>

@@ -1,33 +1,33 @@
 <template lang="html">
-  <div class="container okna-middle">
-    <h1 class="h1-header text-uppercase">оконный клининг</h1>
-    <div class="about-windows-cleaning">
-      <div class="windows-cleaning-top d-flex justify-content-between">
-        <p data-aos="fade-right" class="windows-cleaning-info">{{text}}</p>
-        <div data-aos="fade-left">
-          <h4 class="h4-header text-uppercase mb-4">предоставляемые услуги</h4>
-          <ul class="windows-cleaning-list">
-            <li class="cleaning-list-item mb-3">Моем фасады</li>
-            <li class="cleaning-list-item mb-3">Моем витрины</li>
-            <li class="cleaning-list-item mb-3">Моем витражи</li>
-            <li class="cleaning-list-item mb-3">Моем окна</li>
-          </ul>
-        </div>
-      </div>
-      <div class="windows-cleaning-bottom d-flex justify-content-around">
-        <div data-aos="fade-right" class="text-center">
-            <img src="../assets/img/shield.svg">
-            <p class="mt-2">Работу выполняют
-              <br> высококвалифицированные специалисты</p>
-        </div>
-        <div data-aos="fade-left" class="text-center">
-            <img src="../assets/img/quality.svg">
-            <p class="mt-2">Высокий уровень обслуживания и
-              <br> европейские стандарты качества</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <b-container class="okna-middle">
+    <h1 class="h1-header mb-5 text-uppercase">оконный клининг</h1>
+    <b-row class="text-center-md">
+      <b-col data-aos="fade-right" cols="12" lg="6" md="6">
+        <p class="windows-cleaning-info">{{text}}</p>
+      </b-col>
+      <b-col data-aos="fade-left" cols="12" lg="3" md="6" class="ml-auto">
+        <h4 class="h4-header text-uppercase mb-4">предоставляемые услуги</h4>
+        <ul class="windows-cleaning-list">
+          <li class="cleaning-list-item mb-3">Моем фасады</li>
+          <li class="cleaning-list-item mb-3">Моем витрины</li>
+          <li class="cleaning-list-item mb-3">Моем витражи</li>
+          <li class="cleaning-list-item mb-3">Моем окна</li>
+        </ul>
+      </b-col>
+    </b-row>
+    <b-row class="text-center mt-5">
+      <b-col data-aos="fade-right" cols="12" lg="6" md="6" class="ml-auto">
+        <img src="../assets/img/shield.svg">
+        <p class="mt-2">Работу выполняют
+          <br> высококвалифицированные специалисты</p>
+      </b-col>
+      <b-col data-aos="fade-left" cols="12" lg="6" md="6" class="mr-auto">
+        <img src="../assets/img/quality.svg">
+        <p class="mt-2">Высокий уровень обслуживания и
+          <br> европейские стандарты качества</p>
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script>
@@ -45,11 +45,7 @@ export default {
 .okna-middle {
   padding: 8rem 0;
 }
-.windows-cleaning-top {
-  margin: 4rem 0 6rem 0;
-}
 .windows-cleaning-info {
-  width: 550px;
   font-size: 16px;
   line-height: 30px;
 }

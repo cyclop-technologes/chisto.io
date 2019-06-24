@@ -1,11 +1,11 @@
 <template lang="html">
   <b-container class="my-auto">
     <b-row>
-      <b-col data-aos="fade-right" cols="12" lg="5" class="text-white">
+      <b-col data-aos="fade-right" cols="12" lg="5" md="6" class="text-white">
         <h1 class="h1-header mb-5 text-uppercase">мытье окон, витражей</h1>
         <p>{{text}}</p>
       </b-col>
-      <b-col data-aos="fade-left" cols="12" lg="4" offset-lg="1" class="position-relative">
+      <b-col data-aos="fade-left" cols="12" lg="4" md="6" offset-lg="1" class="position-relative">
         <b-form class="bg-white windows-form shadow">
           <b-form-group class="radio-input">
             <b-form-radio-group
@@ -54,6 +54,9 @@ export default {
 .windows-form {
   border-radius: 2.5rem;
   padding: 2.5rem;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 2rem;
+  }
 }
 .radio-input {
   .btn:first-child {
@@ -70,5 +73,8 @@ export default {
   right: calc(5rem - 100%);
   top: 50%;
   transform: translateY(-50%);
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
 }
 </style>
