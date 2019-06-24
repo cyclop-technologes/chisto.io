@@ -3,22 +3,25 @@
     <Header></Header>
     <slot></slot>
     <Application v-if="footer"></Application>
+    <Navigation></Navigation>
   </div>
 </template>
 <script>
 import Application from './Application.vue';
+import Navigation from './Navigation.vue';
 import Header from './Header.vue';
 
 export default {
   props: {
     footer: {
       type: Boolean,
-      default: true,
+      default: false,
     },
   },
   components: {
     Header,
     Application,
+    Navigation,
   },
 };
 

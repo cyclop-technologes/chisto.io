@@ -16,7 +16,6 @@
           <p class="info-item-text pt-4">{{item.body}}</p>
         </div>
       </b-col>
-
     </div>
   </div>
 </template>
