@@ -2,10 +2,10 @@
   <div class="home-middle">
     <b-container>
       <b-row>
-        <b-col cols="12" lg="3">
+        <b-col cols="12" lg="3" class="d-flex flex-column">
           <h1 class="h1-header text-uppercase mb-5">{{current.title}}</h1>
           <p>{{current.body}}</p>
-            <b-button :to="current.link" class="text-uppercase w-100 home-button">
+            <b-button :to="current.link" class="text-uppercase w-100 home-button mt-auto mb-5">
                 заказать
             </b-button>
         </b-col>
@@ -110,9 +110,15 @@ export default {
   margin-top: 6rem;
 }
 .home-radio {
+  .btn {
+    cursor: pointer;
+  }
 }
 .home-img {
   width: 100%;
+  height: 480px;
+  object-fit: cover;
+  object-position: center;
 }
 .home-radio-group {
   .btn {

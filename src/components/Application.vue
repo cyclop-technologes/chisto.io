@@ -19,8 +19,10 @@
   </div>
 </template>
 <script>
+
+
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../assets/scss/main.scss';
 .mobile-application {
   position: relative;
