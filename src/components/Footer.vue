@@ -4,7 +4,7 @@
     <b-container class="footer-container">
       <div class="border-bottom pt-5 mb-3"></div>
       <b-row>
-        <b-col cols="12" lg="2">
+        <b-col cols="12" lg="2" md="3">
           <ul class="contacts">
             <li><h4 class="footer-title">Звоните-пишите:</h4></li>
             <li><a href="tel:89180039494">8(918)003-94-94</a></li>
@@ -12,7 +12,7 @@
             <li><a href="http://www.chisto.io"><img src="../assets/img/whatsapp.svg"></a></li>
           </ul>
         </b-col>
-        <b-col cols="12" lg="2">
+        <b-col cols="12" lg="2" md="3">
           <h4 class="footer-title">Следите за нами:</h4>
             <b-nav class="links-padding">
               <b-nav-item>
@@ -29,12 +29,12 @@
               </b-nav-item>
             </b-nav>
         </b-col>
-        <b-col cols="12" lg="2">
+        <b-col cols="12" lg="2" md="3">
           <h4 class="footer-title">Принимаем к оплате:</h4>
           <div class="payment-img"><img src="../assets/img/payment.svg"></div>
         </b-col>
-        <b-col cols="12" lg="6">
-          <b-nav class="footer-menu links-padding justify-content-end">
+        <b-col cols="12" lg="6" md="2" offset-md="1">
+          <b-nav class="footer-menu links-padding justify-content-end mb-2">
               <b-nav-item class="text-uppercase" v-for="(item, key) in footLinks"  :key="key" :to="key">
                   {{item}}
               </b-nav-item>
@@ -109,9 +109,14 @@ export default {
   color: $white;
   font-weight: normal;
 }
+.footer-menu {
+  li {
+    cursor: pointer;
+  }
+}
 .links-padding {
   a {
-    padding: 0.5rem 0.5rem;
+    padding: 0rem 0.5rem;
   }
 }
 .nav-item {
