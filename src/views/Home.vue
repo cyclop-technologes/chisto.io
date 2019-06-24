@@ -40,6 +40,9 @@ export default {
   flex: 100%;
   position: relative;
   max-width: 100%;
+  @include media-breakpoint-down(md) {
+    flex: 1;
+  }
 }
 .home-banner-image {
   position: absolute;
@@ -47,6 +50,9 @@ export default {
   max-width: 100%;
   max-height: 100%;
   bottom: 0;
+  @include media-breakpoint-down(md) {
+    position: static;
+  }
 }
 
 </style>

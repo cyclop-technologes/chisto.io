@@ -8,7 +8,7 @@
       <b-navbar-toggle target="navbar"></b-navbar-toggle>
 
       <b-collapse id="navbar" is-nav>
-        <b-navbar-nav fill class="ml-auto">
+        <b-navbar-nav class="ml-auto">
           <b-nav-item class="text-uppercase" v-for="(item, key) in navLinks"  :key="key" :to="`/${key}`">
             {{item}}
           </b-nav-item>
