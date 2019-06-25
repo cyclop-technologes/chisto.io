@@ -15,10 +15,10 @@
         <b-col cols="12" lg="2" md="3">
           <h4 class="footer-title">Следите за нами:</h4>
             <b-nav class="links-padding text-center">
-              <b-nav-item>
+              <b-nav-item href="https://www.instagram.com/chisto.io/">
                 <font-awesome-icon :icon="['fab', 'instagram']" />
               </b-nav-item>
-              <b-nav-item>
+              <b-nav-item href="https://vk.com/chisto_clean">
                 <font-awesome-icon :icon="['fab', 'vk']" />
               </b-nav-item>
               <b-nav-item>
@@ -33,7 +33,7 @@
           <h4 class="footer-title">Принимаем к оплате:</h4>
           <div class="payment-img"><img src="../assets/img/payment.svg"></div>
         </b-col>
-        <b-col cols="12" lg="6" md="2" offset-md="1" offset-lg="0">
+        <b-col cols="12" lg="6" md="2" sm="2" offset-md="1" offset-lg="0">
           <b-nav class="footer-menu links-padding mb-2">
               <b-nav-item class="text-uppercase" v-for="(item, key) in footLinks"  :key="key" :to="key">
                   {{item}}
@@ -115,6 +115,9 @@ export default {
   }
   @include media-breakpoint-down(md) {
     display: flex;
+    justify-content: flex-end !important;
+  }
+  @include media-breakpoint-down(sm) {
     justify-content: center !important;
   }
 }

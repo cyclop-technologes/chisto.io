@@ -15,6 +15,29 @@
             </div>
             <div class="text-left" v-html="item.title"></div>
         </b-link>
+        <b-link v-b-modal.modalOther class="banner-footer-item mr-2 mb-4">
+          <div class="text-right">
+            <font-awesome-icon icon="ellipsis-h"/>
+          </div>
+          <div class="text-left">Другое</div>
+        </b-link>
+        <b-modal body-class='modal-other' id="modalOther" hide-footer hide-header>
+          <h4 class="h4-header text-uppercase text-white">мы внимательны к каждому пожеланию</h4>
+          <p class="my-4">Укажите ваш вопрос или пожелание, и менеджер оперативно вам перезвонит.</p>
+          <b-form class="d-flex ">
+            <b-form-input
+               class="text-center rounded-pill mr-2 border-primary"
+               type="tel"
+               placeholder="+7(_ _ _)_ _ _ _ _ _ _"
+           >
+           </b-form-input>
+           <b-button
+               class="rounded-pill w-100" variant="primary" href="">
+               Отправить заявку
+           </b-button>
+
+          </b-form>
+        </b-modal>
     </b-container>
   </div>
 </template>
@@ -44,10 +67,6 @@ export default {
           title:'Химчистка',
           icon: 'leaf',
         },
-        other: {
-          title:'Другое',
-          icon: 'ellipsis-h',
-        },
       }
     }
   }
@@ -56,6 +75,13 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/scss/main.scss';
+@import '../assets/scss/modal.scss';
+
+.modal-other {
+  background: url('../assets/img/popup-bg.svg') no-repeat;
+  background-size: cover;
+}
+
 .home-banner-footer {
   background-color: #1E2147;
   width: 100%;
@@ -94,5 +120,4 @@ a {
     text-decoration: none;
   }
 }
-
 </style>
