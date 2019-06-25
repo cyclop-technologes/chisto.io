@@ -1,5 +1,6 @@
 <template lang="html">
-  <b-modal body-class='modal-other' content-class='modal-border' id="modalOther" hide-footer hide-header centered>
+  <b-modal body-class='modal-other' ref="my-modal" content-class='modal-border' id="modalOther" class="positiov-relative" hide-footer hide-header centered>
+    <button class="text-white modal-btn-container" @click="hideModal"><font-awesome-icon class="modal-close-btn" icon='times'/></button>
     <h4 class="h4-header text-uppercase text-white">мы внимательны к каждому пожеланию</h4>
     <p class="my-4 modal-text">Укажите Ваш вопрос или пожелание, и менеджер оперативно Вам перезвонит.</p>
     <b-form>
@@ -26,19 +27,23 @@
 
 <script>
 export default {
+  methods: {
+    hideModal() {
+        this.$refs['my-modal'].hide()
+    },
+  },
 }
 </script>
 
 <style lang="scss">
 @import '../assets/scss/main.scss';
 .modal-border {
-  border-radius: 12px !important;
+  border-radius: 1.5rem !important;
   border: none;
 }
 .modal-other {
     background: url('../assets/img/popup-bg.svg') no-repeat;
-    background-size: cover;
-    border-radius: 12px;
+    background-size: cover !important;
     text-align: center;
     padding: 3rem !important;
 
@@ -57,5 +62,20 @@ export default {
   border-radius: 2rem !important;
   resize: none;
   flex: 50%;
+}
+.modal-btn-container {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+
+  .modal-close-btn {
+    font-size: 22px;
+    cursor: pointer;
+    &:hover {
+      color: $primary;
+    }
+  }
 }
 </style>
