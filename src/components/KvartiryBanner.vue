@@ -1,7 +1,7 @@
 <template lang="html">
   <b-container class="my-auto">
     <b-row>
-      <b-col data-aos="fade-right" cols="12" lg="5" md="6" class="text-white">
+      <b-col data-aos="fade-right" cols="12" lg="5" md="6" class="text-white my-auto">
         <h1 class="h1-header mb-5 text-uppercase">уборка квартир и домов</h1>
         <p>{{text}}</p>
       </b-col>
