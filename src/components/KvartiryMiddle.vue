@@ -1,8 +1,8 @@
 <template lang="html">
-  <div class="text-center kvartiry-middle">
+  <b-container class="text-center kvartiry-middle">
     <h1 class="h1-header text-uppercase">сравнить уборку</h1>
-    <div class="d-flex justify-content-around">
-      <div data-aos="fade-right" class="general-clean">
+    <b-row class="justify-content-around">
+      <b-col data-aos="fade-right" cols="12" lg="6" md="6" sm="12">
         <h4 class="h4-header text-uppercase mt-5 mb-5">генеральная уборка</h4>
         <ul class="text-left general-list">
           <li
@@ -10,8 +10,8 @@
             :key='index'
             class="mb-3 pl-5 general-list-item">{{item}}</li>
         </ul>
-      </div>
-      <div data-aos="fade-left" class="express-clean">
+      </b-col>
+      <b-col data-aos="fade-left" cols="12" lg="6" md="6" sm="12">
         <h4 class="h4-header text-uppercase mt-5 mb-5">экспресс уборка</h4>
         <ul class="text-right express-list">
           <li
@@ -19,9 +19,9 @@
             :key='index'
             class="mb-3 pr-5 express-list-item">{{item}}</li>
         </ul>
-      </div>
-    </div>
-  </div>
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script>
@@ -62,12 +62,15 @@ export default {
   position: relative;
   &:before {
     content: "";
-    height: 90%;
+    height: 92%;
     width: 2px;
     background: $primary;
     position: absolute;
     left: 64px;
     top: 15px;
+    @include media-breakpoint-down(md) {
+      height: 92%;
+    }
   }
 }
 .general-list-item {
@@ -93,7 +96,14 @@ export default {
     background: $primary;
     position: absolute;
     right: 24px;
-    top: 15px;
+    top: 20px;
+    @include media-breakpoint-down(md) {
+      top: 32px;
+    }
+    @include media-breakpoint-down(sm) {
+      top: 45px;
+      height: 86%;
+    }
   }
 }
 .express-list-item {

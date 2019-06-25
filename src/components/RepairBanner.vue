@@ -51,6 +51,9 @@ export default {
 .form {
   border-radius: 2.5rem;
   padding: 2rem;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 2rem;
+  }
 }
 .repair-img {
   position: absolute;
