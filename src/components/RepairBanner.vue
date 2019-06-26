@@ -6,7 +6,7 @@
         <p>{{text}}</p>
       </b-col>
       <b-col cols="12" lg="4" md="6" offset-lg="1" class="position-relative">
-        <b-form class="bg-white form shadow">
+        <b-form class="bg-white form shadow position-relative">
           <b-form-input
              class="text-center rounded-pill mb-4 border-primary"
              type="text"
@@ -21,9 +21,10 @@
         </b-form-input>
            <InputPhone></InputPhone>
           <b-button
-              class="rounded-pill w-100" variant="primary" href="">
+              class="rounded-pill w-100 repair-btn" variant="primary" href="">
               Рассчитать стоимость
           </b-button>
+          <img src="../assets/img/vacuum.svg" class="sm-vacuum-image">
         </b-form>
         <img class="repair-img" src="../assets/img/cleaner-repair.svg">
       </b-col>
@@ -62,6 +63,20 @@ export default {
   transform: translateY(-50%);
   @include media-breakpoint-down(md) {
     display: none;
+  }
+}
+.repair-btn {
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 4rem;
+  }
+}
+.sm-vacuum-image {
+  display: none;
+  @include media-breakpoint-down(sm) {
+    display: block;
+    position: absolute;
+    bottom: -1.5rem;
+    right: -0.5rem;
   }
 }
 </style>

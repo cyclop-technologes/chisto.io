@@ -6,7 +6,7 @@
         <p>{{text}}</p>
       </b-col>
       <b-col data-aos="fade-left" cols="12" lg="4" md="6" offset-lg="1" class="position-relative">
-        <b-form class="bg-white kvartiry-form shadow">
+        <b-form class="bg-white kvartiry-form shadow position-relative">
           <b-form-group class="radio-input">
             <b-form-radio-group
               id="btn-radios-1"
@@ -66,9 +66,10 @@
          </div>
            <InputPhone></InputPhone>
           <b-button
-              class="rounded-pill w-100" variant="primary" href="">
+              class="rounded-pill w-100 flat-btn" variant="primary" href="">
               Рассчитать стоимость
           </b-button>
+          <img class="sm-spray-image" src="../assets/img/spray.svg">
         </b-form>
         <img class="kvartiry-img" src="../assets/img/cleaner-kvartiry.svg"/>
       </b-col>
@@ -164,5 +165,19 @@ export default {
 }
 .next-step-btn {
   right: 0;
+}
+.flat-btn {
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 3rem;
+  };
+}
+.sm-spray-image {
+  display: none;
+  @include media-breakpoint-down(sm) {
+    display: block;
+    position: absolute;
+    right: -0.5rem;
+    bottom: -1.5rem;
+  }
 }
 </style>
