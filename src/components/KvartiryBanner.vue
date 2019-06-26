@@ -64,12 +64,7 @@
             variant="primary"
             href="">+</b-button>
          </div>
-           <b-form-input
-              class="text-center rounded-pill mb-4 border-primary"
-              type="tel"
-              placeholder="+7(_ _ _)_ _ _ _ _ _ _"
-          >
-          </b-form-input>
+           <InputPhone></InputPhone>
           <b-button
               class="rounded-pill w-100" variant="primary" href="">
               Рассчитать стоимость
@@ -82,7 +77,12 @@
 </template>
 
 <script>
+import InputPhone from '../components/InputPhone.vue';
+
 export default {
+  components: {
+    InputPhone,
+  },
   data() {
     return {
       text: 'Вы можете воспользоваться нашими услугами и заказать поддерживающую или генеральную уборку. От выбранной вами услуги зависит оборудование, с которым приедет клинер. Для расчета стоимости больших площадей вы можете бесплатно вызвать специалиста по оценке: представитель компании озвучит точную стоимость уборки на месте.',

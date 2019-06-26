@@ -19,12 +19,7 @@
             placeholder="Введите площадь"
         >
         </b-form-input>
-           <b-form-input
-              class="text-center rounded-pill mb-4 border-primary"
-              type="tel"
-              placeholder="+7(_ _ _)_ _ _ _ _ _ _"
-          >
-          </b-form-input>
+           <InputPhone></InputPhone>
           <b-button
               class="rounded-pill w-100" variant="primary" href="">
               Рассчитать стоимость
@@ -37,7 +32,12 @@
 </template>
 
 <script>
+import InputPhone from '../components/InputPhone.vue';
+
 export default {
+  components: {
+    InputPhone,
+  },
   data() {
     return {
       text: 'Такой вид уборки выполняется силами нескольких специалистов клининговой компании ЧИСТО. Клинеры приезжают со всем необходимым оборудованием, средствами и материалами. Средняя продолжительность уборки после ремонта — 8-9 часов. Оформите заказ онлайн, и наш менеджер свяжется с вами для подтверждения и уточнения всех деталей.',

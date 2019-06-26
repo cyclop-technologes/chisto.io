@@ -10,14 +10,9 @@
         class="modal-textarea mb-3 px-4 py-3 border-primary">
       </b-form-textarea>
       <div class="d-flex">
-        <b-form-input
-           class="text-center rounded-pill mr-2 border-primary"
-           type="tel"
-           placeholder="+7(_ _ _)_ _ _ _ _ _ _"
-       >
-       </b-form-input>
+        <InputPhone></InputPhone>
        <b-button
-           class="rounded-pill w-100" variant="primary" href="">
+           class="rounded-pill w-100 mb-3" variant="primary" href="">
            Отправить заявку
        </b-button>
       </div>
@@ -26,7 +21,12 @@
 </template>
 
 <script>
+import InputPhone from '../components/InputPhone.vue';
+
 export default {
+  components: {
+    InputPhone,
+  },
   methods: {
     hideModal() {
         this.$refs['my-modal'].hide()

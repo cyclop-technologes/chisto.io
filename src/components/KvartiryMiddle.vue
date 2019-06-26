@@ -103,6 +103,10 @@ export default {
     @include media-breakpoint-down(sm) {
       top: 45px;
       height: 86%;
+      text-align: left !important;
+      &:after {
+        left: -30px;
+      }
     }
   }
 }

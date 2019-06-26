@@ -40,14 +40,9 @@
           <b-form-textarea
             rows="5"
             placeholder="Укажите Ваш комментарий"
-            class="khim-textarea mb-2 px-4 py-3 border-primary">
+            class="khim-textarea mb-3 px-4 py-3 border-primary">
           </b-form-textarea>
-           <b-form-input
-              class="text-center rounded-pill mb-4 border-primary"
-              type="tel"
-              placeholder="+7(_ _ _)_ _ _ _ _ _ _"
-          >
-          </b-form-input>
+           <InputPhone></InputPhone>
           <b-button
               class="rounded-pill w-100" variant="primary" href="">
               Рассчитать стоимость
@@ -60,7 +55,12 @@
 </template>
 
 <script>
+import InputPhone from '../components/InputPhone.vue';
+
 export default {
+  components: {
+    InputPhone,
+  },
   data() {
     return {
       text: 'Занимаемся химчисткой мягкой мебели и ковровых покрытий с выездом на дом или в офис. Используем только гипоаллергенные и профессиональные средства.',
