@@ -33,7 +33,7 @@
           <h4 class="footer-title">Принимаем к оплате:</h4>
           <div class="payment-img"><img src="../assets/img/payment.svg"></div>
         </b-col>
-        <b-col cols="12" lg="6" md="2" sm="2" offset-md="1" offset-lg="0">
+        <b-col cols="12" lg="6" md="2" sm="2" class="bottom-menu" offset-md="1" offset-lg="0">
           <b-nav class="footer-menu links-padding mb-2">
               <b-nav-item class="text-uppercase" v-for="(item, key) in footLinks"  :key="key" :to="key">
                   {{item}}
@@ -76,7 +76,11 @@ export default {
 </script>
 <style lang="scss">
 @import '../assets/scss/main.scss';
-
+.bottom-menu {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
 .footer {
   background: url('../assets/img/bg-footer.svg') no-repeat;
   background-size: cover;
@@ -108,6 +112,9 @@ export default {
   font-size: 14px;
   color: $white;
   font-weight: normal;
+  @include media-breakpoint-down(sm) {
+    margin-top: 1rem;
+  }
 }
 .footer-menu {
   li {
@@ -118,7 +125,7 @@ export default {
     justify-content: flex-end !important;
   }
   @include media-breakpoint-down(sm) {
-    justify-content: center !important;
+    display: none;
   }
 }
 .links-padding {

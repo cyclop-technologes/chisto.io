@@ -19,12 +19,7 @@
              >
              </b-form-radio-group>
           </b-form-group>
-           <b-form-input
-              class="text-center rounded-pill mb-4 border-primary"
-              type="tel"
-              placeholder="+7(_ _ _)_ _ _ _ _ _ _"
-          >
-          </b-form-input>
+           <InputPhone></InputPhone>
           <b-button
               class="rounded-pill w-100" variant="primary" href="">
               Рассчитать стоимость
@@ -35,8 +30,14 @@
     </b-row>
   </b-container>
 </template>
+
 <script>
+import InputPhone from '../components/InputPhone.vue';
+
 export default {
+  components: {
+    InputPhone,
+  },
   data() {
     return {
       text: 'Наши клинеры используют специальное оборудование и средства, чтобы достичь идеальной чистоты окон и витражей. Обратите внимание, мы не моем окна снаружи в зимнее время, а также при температуре ноль градусов и ниже.',

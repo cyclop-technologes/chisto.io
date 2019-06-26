@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import AOS from 'aos';
+import VueMask from 'v-mask';
 import 'aos/dist/aos.css';
 import BootstrapVue from 'bootstrap-vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -40,6 +41,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 AOS.init();
 Vue.use(BootstrapVue);
+Vue.use(VueMask);
 Vue.config.productionTip = false;
 
 new Vue({
