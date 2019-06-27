@@ -1,20 +1,33 @@
 <template lang="html">
-
+ <b-container>
+   <b-row>
+     <b-col cols="12" lg="4" class="mt-auto">
+       <h1 class="h1-header text-uppercase text-white">мы убираем, <br> вы отдыхаете!</h1>
+       <p class="text-white mt-5">Мы помогаем экономить время и силы.
+         Доверьтесь профессионалам и почувствуйте идеальную чистоту.</p>
+     </b-col>
+     <b-col cols="12" lg="8">
+       <img src="../assets/img/banner-image.svg" class="home-banner-image">
+     </b-col>
+   </b-row>
+ </b-container>
 </template>
 
 <script>
-import Navigation from './Navigation.vue';
 
 export default {
-  components: {
-    Navigation,
-  },
   };
-
 </script>
 
 <style lang="scss" scoped>
 @import '../assets/scss/main.scss';
+.home-banner-image {
+  position: relative;
+  left: -50%;
+  @include media-breakpoint-down(sm) {
+    left: -160%;
+  }
+}
 .home-banner-footer {
   background-color: #1E2147;
   width: 100%;
