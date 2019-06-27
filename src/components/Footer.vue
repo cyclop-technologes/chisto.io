@@ -12,7 +12,7 @@
             <li><a href="http://www.chisto.io"><img src="../assets/img/whatsapp.svg"></a></li>
           </ul>
         </b-col>
-        <b-col cols="12" lg="2" md="3">
+        <b-col cols="12" lg="2" md="3" class="footer-social">
           <h4 class="footer-title">Следите за нами:</h4>
             <b-nav class="links-padding text-center">
               <b-nav-item href="https://www.instagram.com/chisto.io/">
@@ -29,7 +29,7 @@
               </b-nav-item>
             </b-nav>
         </b-col>
-        <b-col cols="12" lg="2" md="3">
+        <b-col cols="12" lg="2" md="3" class="footer-payment">
           <h4 class="footer-title">Принимаем к оплате:</h4>
           <div class="payment-img"><img src="../assets/img/payment.svg"></div>
         </b-col>
@@ -76,6 +76,16 @@ export default {
 </script>
 <style lang="scss">
 @import '../assets/scss/main.scss';
+.footer-payment {
+  @include media-breakpoint-down(sm){
+    order: -1;
+  }
+}
+.footer-social {
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 1.5rem;
+  }
+}
 .bottom-menu {
   @include media-breakpoint-down(sm) {
     display: none;
