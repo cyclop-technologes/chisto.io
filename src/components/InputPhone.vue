@@ -5,20 +5,25 @@
      maxlength="17"
      placeholder="+7(_ _ _)_ _ _ _ _ _ _"
      v-mask="'+7##########'"
-     v-model="models.PhoneNumber"
+     v-model='content'
+     @input="handleInput"
  >
  </b-form-input>
 </template>
 
 <script>
 export default {
+  prop: ['value'],
   data () {
     return {
-      models: {
-        PhoneNumber:'',
-      },
+      content: this.value
     }
   },
+  methods: {
+    handleInput (e) {
+      this.$emit('input', this.content)
+    }
+  }
 }
 </script>
 

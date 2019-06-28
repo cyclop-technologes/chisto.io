@@ -19,7 +19,7 @@
              >
              </b-form-radio-group>
           </b-form-group>
-           <InputPhone></InputPhone>
+           <InputPhone v-model='phone'></InputPhone>
           <b-button
               class="rounded-pill w-100" variant="primary" href="">
               Рассчитать стоимость
@@ -46,6 +46,7 @@ export default {
         { text: 'Окна', value: 'radio1' },
         { text: 'Витражи', value: 'radio2' },
       ],
+      phone: '',
     };
   },
 };

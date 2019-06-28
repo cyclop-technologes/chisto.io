@@ -64,7 +64,7 @@
             variant="primary"
             href="">+</b-button>
          </div>
-           <InputPhone></InputPhone>
+           <InputPhone v-model='phone'></InputPhone>
           <b-button
               class="rounded-pill w-100 flat-btn" variant="primary" href="">
               Рассчитать стоимость
@@ -98,6 +98,7 @@ export default {
       toiletIndex: 0,
       windows: ['1 окно', '2 окна', '3 окна', '4 окна', '5 окон', '6 окон', ' 7 окон', '8 окон', 'больше 8-ми окон'],
       windowsIndex: 0,
+      phone: '',
     };
   },
   computed: {

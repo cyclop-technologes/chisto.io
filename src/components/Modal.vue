@@ -10,7 +10,7 @@
         class="modal-textarea mb-3 px-4 py-3 border-primary">
       </b-form-textarea>
       <div class="d-flex">
-        <InputPhone></InputPhone>
+        <InputPhone v-model='phone'></InputPhone>
        <b-button
            class="rounded-pill w-100 mb-3" variant="primary" href="">
            Отправить заявку
@@ -24,6 +24,11 @@
 import InputPhone from '../components/InputPhone.vue';
 
 export default {
+  data () {
+    return {
+      phone: '',
+    }
+  }
   components: {
     InputPhone,
   },

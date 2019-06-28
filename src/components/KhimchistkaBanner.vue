@@ -42,7 +42,7 @@
             placeholder="Укажите Ваш комментарий"
             class="khim-textarea mb-3 px-4 py-3 border-primary">
           </b-form-textarea>
-           <InputPhone></InputPhone>
+           <InputPhone v-model='phone'></InputPhone>
           <b-button
               class="rounded-pill w-100" variant="primary" href="">
               Рассчитать стоимость
@@ -68,6 +68,7 @@ export default {
       mattress: false,
       coating: false,
       other: false,
+      phone: '',
     };
   },
 };
