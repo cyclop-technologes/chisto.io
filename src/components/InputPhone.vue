@@ -4,7 +4,7 @@
      type="text"
      maxlength="17"
      placeholder="+7(_ _ _)_ _ _ _ _ _ _"
-     v-mask="'+7(###)-###-##-##'"
+     v-mask="'+7##########'"
      v-model="models.PhoneNumber"
  >
  </b-form-input>
