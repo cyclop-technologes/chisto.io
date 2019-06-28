@@ -7,13 +7,17 @@
       <b-form-textarea
         rows="5"
         placeholder="Укажите Ваш комментарий"
-        class="modal-textarea mb-3 px-4 py-3 border-primary">
+        class="modal-textarea mb-3 px-4 py-3 border-primary"
+        v-model='comment'>
       </b-form-textarea>
       <div class="d-flex">
         <InputPhone v-model='phone'></InputPhone>
-       <b-button
-           class="rounded-pill w-100 mb-3" variant="primary" href="">
-           Отправить заявку
+       <b-button @click="sendData"
+          :disabled='disabled'
+           class="rounded-pill w-100 mb-3"
+           variant="primary">
+           <b-spinner small v-if='disabled'></b-spinner>
+           <span v-else>Отправить заявку</span>
        </b-button>
       </div>
     </b-form>
@@ -27,8 +31,10 @@ export default {
   data () {
     return {
       phone: '',
+      comment: '',
+      disabled: false,
     }
-  }
+  },
   components: {
     InputPhone,
   },
@@ -36,6 +42,26 @@ export default {
     hideModal() {
         this.$refs['my-modal'].hide()
     },
+    sendData() {
+      if (this.phone && this.comment) {
+        this.disabled = true
+        let data = JSON.stringify({
+            comment: this.comment,
+            phone: this.phone,
+            source: 2,
+            type_clean: 8,
+        });
+        this.axios.post('http://crm.chisto.io/api/add_order.php?params=' + data).then(response => {
+          console.log(response);
+          this.disabled = false;
+          alert(response.status);
+          this.comment = '';
+          this.phone = '';
+        }).catch(error => {
+            alert(error);
+        })
+      }
+    }
   },
 }
 </script>
