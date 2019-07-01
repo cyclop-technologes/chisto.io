@@ -7,45 +7,28 @@
       </b-col>
       <b-col data-aos="fade-left" cols="12" lg="4" md="6" offset-lg="1" class="position-relative">
         <b-form class="bg-white khim-form shadow">
-          <div class="d-flex flex-wrap justify-content-between">
-            <b-form-checkbox
-            v-model="furniture"
-            name="check-button"
-            button button-variant="outline-primary"
-            class="checkbox-item mb-2 pr-2">
-                    Мебель
-            </b-form-checkbox>
-            <b-form-checkbox
-            v-model="mattress"
-            name="check-button"
-            button button-variant="outline-primary"
-            class="checkbox-item mb-2">
-              Матрас
-            </b-form-checkbox>
-            <b-form-checkbox
-            v-model="coating"
-            name="check-button"
-            button button-variant="outline-primary"
-            class="checkbox-item mb-4 pr-2">
-              Поктрытие
-            </b-form-checkbox>
-            <b-form-checkbox
-            v-model="other"
-            name="check-button"
-            button button-variant="outline-primary"
-            class="checkbox-item mb-4">
-              Другое
-            </b-form-checkbox>
-          </div>
+          <b-form-group id="khim-group">
+            <b-form-checkbox-group
+              v-model="selected"
+              :options="options"
+              buttons
+              button-variant="outline-primary"
+              class="d-flex justify-content-between flex-wrap khim-radio">
+            </b-form-checkbox-group>
+          </b-form-group>
           <b-form-textarea
+            v-model="comment"
             rows="5"
             placeholder="Укажите Ваш комментарий"
             class="khim-textarea mb-3 px-4 py-3 border-primary">
           </b-form-textarea>
-           <InputPhone></InputPhone>
-          <b-button
-              class="rounded-pill w-100" variant="primary" href="">
-              Рассчитать стоимость
+          <InputPhone v-model='phone'></InputPhone>
+          <b-button @click="sendData"
+              :disabled='disabled'
+              class="rounded-pill w-100"
+              variant="primary">
+              <b-spinner small v-if='disabled'></b-spinner>
+              <span v-else>Рассчитать стоимость</span>
           </b-button>
         </b-form>
         <img class="khimchistka-img" src="../assets/img/cleaner-khimchistka.svg">
@@ -64,12 +47,41 @@ export default {
   data() {
     return {
       text: 'Занимаемся химчисткой мягкой мебели и ковровых покрытий с выездом на дом или в офис. Используем только гипоаллергенные и профессиональные средства.',
-      furniture: false,
-      mattress: false,
-      coating: false,
-      other: false,
+      phone: '',
+      disabled: false,
+      comment: '',
+      selected: [],
+        options: [
+          { text: 'Мебель', value: 'Мебель' },
+          { text: 'Матрас', value: 'Матрас' },
+          { text: 'Покрытие', value: 'Покрытие' },
+          { text: 'Другое', value: 'Другое' }
+        ]
     };
   },
+  methods: {
+    sendData() {
+      if (this.phone && this.comment) {
+        this.disabled = true
+        let data = JSON.stringify({
+            phone: this.phone,
+            comment: this.comment,
+            type_dry_clean: this.selected.join(';'),
+            source: 2,
+            type_clean: 4,
+        });
+        this.axios.post('http://crm.chisto.io/api/add_order.php?params=' + data).then(response => {
+          console.log(response);
+          this.disabled = false;
+          alert(response.status);
+          this.comment = '';
+          this.phone = '';
+        }).catch(error => {
+            alert(error);
+        })
+      }
+    }
+  }
 };
 </script>
 
@@ -80,6 +92,16 @@ export default {
   padding: 2rem;
   @include media-breakpoint-down(md) {
     margin-bottom: 2rem;
+  }
+}
+.khim-radio {
+label.btn {
+    border-radius: 1rem !important;
+    flex: 25%;
+    margin-bottom: 0.5rem;
+    &:nth-child(odd) {
+      margin-right: 0.5rem;
+    }
   }
 }
 .khim-textarea {

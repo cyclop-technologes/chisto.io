@@ -53,10 +53,10 @@ export default {
     return {
       footLinks: {
         about: 'о нас',
-        franchise: 'франшиза',
+        // franchise: 'франшиза',
         jobs: 'вакансии',
         faq: 'faq',
-        feedback: 'отзывы',
+        // feedback: 'отзывы',
       },
     };
   },

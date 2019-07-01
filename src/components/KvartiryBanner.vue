@@ -15,15 +15,16 @@
               buttons
               name="radios-btn-default"
               button-variant="outline-primary"
-              class="w-100 mb-2"
-             >
+              class="w-100 mb-2">
              </b-form-radio-group>
           </b-form-group>
           <b-form-input
              class="text-center rounded-pill mb-3 border-primary"
+             min="1"
+             max="1000"
+             v-model="area"
              type="number"
-             placeholder="Введите площадь"
-         >
+             placeholder="Введите площадь">
          </b-form-input>
          <div class="position-relative bg-white flat-input my-3">
            <b-button
@@ -64,12 +65,15 @@
             variant="primary"
             href="">+</b-button>
          </div>
-           <InputPhone></InputPhone>
-          <b-button
-              class="rounded-pill w-100 flat-btn" variant="primary" href="">
-              Рассчитать стоимость
-          </b-button>
-          <img class="sm-spray-image" src="../assets/img/spray.svg">
+           <InputPhone v-model='phone'></InputPhone>
+           <b-button @click="sendData"
+              :disabled='disabled'
+              class="rounded-pill w-100 flat-btn"
+              variant="primary">
+              <b-spinner small v-if='disabled'></b-spinner>
+              <span v-else>Рассчитать стоимость</span>
+            </b-button>
+            <img class="sm-spray-image" src="../assets/img/spray.svg">
         </b-form>
         <img class="kvartiry-img" src="../assets/img/cleaner-kvartiry.svg"/>
       </b-col>
@@ -87,10 +91,12 @@ export default {
   data() {
     return {
       text: 'Вы можете воспользоваться нашими услугами и заказать поддерживающую или генеральную уборку. От выбранной вами услуги зависит оборудование, с которым приедет клинер. Для расчета стоимости больших площадей вы можете бесплатно вызвать специалиста по оценке: представитель компании озвучит точную стоимость уборки на месте.',
-      selected: 'radio1',
+      selected: 6,
+      area: '',
+      disabled: false,
       options: [
-        { text: 'Генеральная', value: 'radio1' },
-        { text: 'Экспресс', value: 'radio2' },
+        { text: 'Генеральная', value: 6 },
+        { text: 'Экспресс', value: 2 },
       ],
       flats: ['1-х комнатная', '2-х комнатная', '3-х комнатная', '4-х комнатная', '5-х комнатная', 'больше 5-ти комнат'],
       flatIndex: 0,
@@ -98,12 +104,19 @@ export default {
       toiletIndex: 0,
       windows: ['1 окно', '2 окна', '3 окна', '4 окна', '5 окон', '6 окон', ' 7 окон', '8 окон', 'больше 8-ми окон'],
       windowsIndex: 0,
+      phone: '',
     };
   },
   computed: {
-    currentFlat() { return this.flats[this.flatIndex]; },
-    currentToilet() { return this.toilets[this.toiletIndex]; },
-    currentWindows() { return this.windows[this.windowsIndex]; },
+    currentFlat() {
+      return this.flats[this.flatIndex];
+    },
+    currentToilet() {
+      return this.toilets[this.toiletIndex];
+    },
+    currentWindows() {
+      return this.windows[this.windowsIndex];
+    },
   },
   methods: {
     counterAdd(arr, cur) {
@@ -118,6 +131,30 @@ export default {
         this[cur]--;
       } else {
         console.log('return');
+      }
+    },
+    sendData() {
+      if (this.phone && this.area) {
+        this.disabled = true
+        let data = JSON.stringify({
+            type_clean: this.selected,
+            phone: this.phone,
+            area: this.area,
+            count_rooms: this.flats.indexOf(this.currentFlat)+1,
+            count_bathtooms: this.toilets.indexOf(this.currentToilet)+1,
+            windows: this.windows.indexOf(this.currentWindows)+1,
+            source: 2,
+        });
+        this.axios.post('http://crm.chisto.io/api/add_order.php?params=' + data).then(response => {
+          console.log(response);
+          this.disabled = false;
+          alert(response.status);
+          this.selected = 6;
+          this.phone = '';
+          this.area = '';
+        }).catch(error => {
+            alert(error);
+        })
       }
     },
   },

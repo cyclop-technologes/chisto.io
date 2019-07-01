@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import AOS from 'aos';
+import axios from 'axios';
+import VueAxios from 'vue-axios';
 import VueMask from 'v-mask';
 import 'aos/dist/aos.css';
 import BootstrapVue from 'bootstrap-vue';
@@ -19,7 +21,6 @@ import {
   faEllipsisH,
   faTimes,
 } from '@fortawesome/free-solid-svg-icons';
-
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import router from './router';
 import App from './App.vue';
@@ -41,6 +42,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 AOS.init();
 Vue.use(BootstrapVue);
+Vue.use(VueAxios, axios);
 Vue.use(VueMask);
 Vue.config.productionTip = false;
 

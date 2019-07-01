@@ -25,10 +25,10 @@ export default {
     return {
       navLinks: {
         about: 'о нас',
-        franchise: 'франшиза',
+        // franchise: 'франшиза',
         jobs: 'вакансии',
         faq: 'faq',
-        feedback: 'отзывы',
+        // feedback: 'отзывы',
         contacts: 'контакты',
       },
     };
