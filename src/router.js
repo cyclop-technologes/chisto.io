@@ -7,6 +7,7 @@ import Repair from './views/Repair.vue';
 import Okna from './views/Okna.vue';
 import Khimchistka from './views/Khimchistka.vue';
 import Faq from './views/Faq.vue';
+import Jobs from './views/Jobs.vue';
 
 Vue.use(Router);
 
@@ -48,6 +49,11 @@ export default new Router({
       path: '/faq',
       name: 'faq',
       component: Faq,
+    },
+    {
+      path: '/jobs',
+      name: 'jobs',
+      component: Jobs,
     },
     // {
     //   path: '/about',

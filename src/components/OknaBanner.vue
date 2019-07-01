@@ -20,9 +20,12 @@
              </b-form-radio-group>
           </b-form-group>
            <InputPhone v-model='phone'></InputPhone>
-          <b-button
-              class="rounded-pill w-100" variant="primary" href="">
-              Рассчитать стоимость
+           <b-button @click="sendData"
+              :disabled='disabled'
+              class="rounded-pill w-100"
+              variant="primary">
+              <b-spinner small v-if='disabled'></b-spinner>
+              <span v-else>Рассчитать стоимость</span>
           </b-button>
         </b-form>
         <img class="okna-img" src="../assets/img/cleaner-okna.svg">
@@ -41,14 +44,35 @@ export default {
   data() {
     return {
       text: 'Наши клинеры используют специальное оборудование и средства, чтобы достичь идеальной чистоты окон и витражей. Обратите внимание, мы не моем окна снаружи в зимнее время, а также при температуре ноль градусов и ниже.',
-      selected: 'radio1',
+      selected: 3,
       options: [
-        { text: 'Окна', value: 'radio1' },
-        { text: 'Витражи', value: 'radio2' },
+        { text: 'Окна', value: 3 },
+        { text: 'Витражи', value: 14 },
       ],
       phone: '',
     };
   },
+  methods: {
+    sendData() {
+      if (this.phone && this.selected) {
+        this.disabled = true
+        let data = JSON.stringify({
+            phone: this.phone,
+            source: 2,
+            type_clean: this.selected,
+        });
+        this.axios.post('http://crm.chisto.io/api/add_order.php?params=' + data).then(response => {
+          console.log(response);
+          this.disabled = false;
+          alert(response.status);
+          this.selected = 3;
+          this.phone = '';
+        }).catch(error => {
+            alert(error);
+        })
+      }
+    }
+  }
 };
 </script>
 <style lang="scss">

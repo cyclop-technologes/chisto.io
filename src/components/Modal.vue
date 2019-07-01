@@ -49,7 +49,7 @@ export default {
             comment: this.comment,
             phone: this.phone,
             source: 2,
-            type_clean: 8,
+            type_clean: 16,
         });
         this.axios.post('http://crm.chisto.io/api/add_order.php?params=' + data).then(response => {
           console.log(response);
