@@ -82,7 +82,7 @@
 </template>
 
 <script>
-import InputPhone from '../components/InputPhone.vue';
+import InputPhone from './InputPhone.vue';
 
 export default {
   components: {
@@ -135,26 +135,26 @@ export default {
     },
     sendData() {
       if (this.phone && this.area) {
-        this.disabled = true
-        let data = JSON.stringify({
-            type_clean: this.selected,
-            phone: this.phone,
-            area: this.area,
-            count_rooms: this.flats.indexOf(this.currentFlat)+1,
-            count_bathtooms: this.toilets.indexOf(this.currentToilet)+1,
-            windows: this.windows.indexOf(this.currentWindows)+1,
-            source: 2,
+        this.disabled = true;
+        const data = JSON.stringify({
+          type_clean: this.selected,
+          phone: this.phone,
+          area: this.area,
+          count_rooms: this.flats.indexOf(this.currentFlat) + 1,
+          count_bathtooms: this.toilets.indexOf(this.currentToilet) + 1,
+          windows: this.windows.indexOf(this.currentWindows) + 1,
+          source: 2,
         });
-        this.axios.post('http://crm.chisto.io/api/add_order.php?params=' + data).then(response => {
+        this.axios.post(`http://crm.chisto.io/api/add_order.php?params=${data}`).then((response) => {
           console.log(response);
           this.disabled = false;
           alert(response.status);
           this.selected = 6;
           this.phone = '';
           this.area = '';
-        }).catch(error => {
-            alert(error);
-        })
+        }).catch((error) => {
+          alert(error);
+        });
       }
     },
   },

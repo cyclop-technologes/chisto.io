@@ -28,11 +28,12 @@
 
 <script>
 import Modal from './Modal.vue';
+
 export default {
   components: {
     Modal,
   },
-  data () {
+  data() {
     return {
       navItems: {
         kvartiry: {
@@ -40,25 +41,25 @@ export default {
           icon: 'home',
         },
         repair: {
-          title:'После <br> ремонта',
+          title: 'После <br> ремонта',
           icon: 'paint-roller',
         },
         okna: {
-          title:'Окна <br> Витражи',
+          title: 'Окна <br> Витражи',
           icon: 'window-maximize',
         },
         office: {
-          title:'Офисы <br> Коммерция',
+          title: 'Офисы <br> Коммерция',
           icon: 'building',
         },
         khimchistka: {
-          title:'Химчистка',
+          title: 'Химчистка',
           icon: 'leaf',
         },
-      }
-    }
-  }
-}
+      },
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>

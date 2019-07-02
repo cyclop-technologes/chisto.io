@@ -25,45 +25,45 @@
 </template>
 
 <script>
-import InputPhone from '../components/InputPhone.vue';
+import InputPhone from './InputPhone.vue';
 
 export default {
-  data () {
+  data() {
     return {
       phone: '',
       comment: '',
       disabled: false,
-    }
+    };
   },
   components: {
     InputPhone,
   },
   methods: {
     hideModal() {
-        this.$refs['my-modal'].hide()
+      this.$refs['my-modal'].hide();
     },
     sendData() {
       if (this.phone && this.comment) {
-        this.disabled = true
-        let data = JSON.stringify({
-            comment: this.comment,
-            phone: this.phone,
-            source: 2,
-            type_clean: 16,
+        this.disabled = true;
+        const data = JSON.stringify({
+          comment: this.comment,
+          phone: this.phone,
+          source: 2,
+          type_clean: 16,
         });
-        this.axios.post('http://crm.chisto.io/api/add_order.php?params=' + data).then(response => {
+        this.axios.post(`http://crm.chisto.io/api/add_order.php?params=${data}`).then((response) => {
           console.log(response);
           this.disabled = false;
           alert(response.status);
           this.comment = '';
           this.phone = '';
-        }).catch(error => {
-            alert(error);
-        })
+        }).catch((error) => {
+          alert(error);
+        });
       }
-    }
+    },
   },
-}
+};
 </script>
 
 <style lang="scss">

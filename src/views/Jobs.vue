@@ -87,20 +87,18 @@
 <script>
 import Header from '../components/Header.vue';
 import InputPhone from '../components/InputPhone.vue';
-import Footer from '../components/Footer.vue';
 
 export default {
   name: 'jobs',
   components: {
     Header,
     InputPhone,
-    Footer,
   },
   data() {
     return {
       phone: '',
-    }
-  }
+    };
+  },
 };
 </script>
 

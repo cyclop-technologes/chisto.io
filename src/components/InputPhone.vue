@@ -13,17 +13,17 @@
 <script>
 export default {
   prop: ['value'],
-  data () {
+  data() {
     return {
-      content: this.value
-    }
+      content: this.value,
+    };
   },
   methods: {
-    handleInput (e) {
-      this.$emit('input', this.content)
-    }
-  }
-}
+    handleInput(e) {
+      this.$emit('input', this.content);
+    },
+  },
+};
 </script>
 
 <style lang="scss">

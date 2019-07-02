@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import InputPhone from '../components/InputPhone.vue';
+import InputPhone from './InputPhone.vue';
 
 export default {
   components: {
@@ -49,32 +49,32 @@ export default {
       view_object: '',
       area: '',
       disabled: false,
-    }
+    };
   },
   methods: {
     sendData() {
       if (this.phone && this.area && this.view_object) {
-        this.disabled = true
-        let data = JSON.stringify({
-            view_object: this.view_object,
-            phone: this.phone,
-            source: 2,
-            ares: this.area,
-            type_clean: 1,
+        this.disabled = true;
+        const data = JSON.stringify({
+          view_object: this.view_object,
+          phone: this.phone,
+          source: 2,
+          ares: this.area,
+          type_clean: 1,
         });
-        this.axios.post('http://crm.chisto.io/api/add_order.php?params=' + data).then(response => {
+        this.axios.post(`http://crm.chisto.io/api/add_order.php?params=${data}`).then((response) => {
           console.log(response);
           this.disabled = false;
           alert(response.status);
           this.view_object = '';
           this.area = '';
           this.phone = '';
-        }).catch(error => {
-            alert(error);
-        })
+        }).catch((error) => {
+          alert(error);
+        });
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
