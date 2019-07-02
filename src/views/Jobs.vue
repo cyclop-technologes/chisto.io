@@ -1,11 +1,11 @@
 <template lang="html">
 <div class="jobs-page">
   <Header></Header>
-  <b-container class="mt-3 pb-3">
+  <b-container class="mt-3">
     <b-row class="text-center flex-column">
       <b-col cols="12" lg="6" md="8" class="mx-auto">
-        <b-form class="jobs-form shadow">
-          <h3 class="h3-header text-uppercase">Заполните, пожалуйста, анкету</h3>
+        <h3 class="h3-header text-uppercase my-3 text-white">Добро пожаловать на работу мечты</h3>
+        <b-form class="jobs-form shadow text-left">
           <b-form-input
             v-model="text"
             type="text"
@@ -26,44 +26,45 @@
             placeholder="Гражданство"
             class="mb-3 mt-3 rounded-pill border-primary jobs-font">
           </b-form-input>
+          <b-form-checkbox
+            v-model="exp"
+            name="checkbox-1"
+            class="jobs-font">
+            Опыт работы в клининге
+          </b-form-checkbox>
           <b-form-input
             v-model="text"
-            type="text"
-            placeholder="Опыт работы в клининге"
-            class="mb-3 mt-3 rounded-pill border-primary jobs-font">
-          </b-form-input>
-          <b-form-input
-            v-model="text"
+            v-show="exp"
             type="text"
             placeholder="Где и сколько по времени"
             class="mb-3 mt-3 rounded-pill border-primary jobs-font">
           </b-form-input>
+          <b-form-checkbox
+            v-model="ills"
+            name="checkbox-1"
+            class="mb-3 mt-3 jobs-font">
+            Заболевания кожи или аллергия
+          </b-form-checkbox>
+          <b-form-checkbox
+            v-model="medbook"
+            name="checkbox-1"
+            class="mb-3 mt-3 jobs-font">
+            Медицинская книжка
+          </b-form-checkbox>
+          <b-form-checkbox
+            v-model="habits"
+            name="checkbox-1"
+            class="mb-3 mt-3 jobs-font">
+            Вредные привычки
+          </b-form-checkbox>
+          <b-form-checkbox
+            v-model="navigators"
+            name="checkbox-1"
+            class="mb-3 mt-3 jobs-font">
+            Умею пользоваться навигатором
+          </b-form-checkbox>
           <b-form-input
-            v-model="text"
-            type="text"
-            placeholder="Заболевания кожи или аллергия"
-            class="mb-3 mt-3 rounded-pill border-primary jobs-font">
-          </b-form-input>
-          <b-form-input
-            v-model="text"
-            type="text"
-            placeholder="Медицинская книжка"
-            class="mb-3 mt-3 rounded-pill border-primary jobs-font">
-          </b-form-input>
-          <b-form-input
-            v-model="text"
-            type="text"
-            placeholder="Вредные привычки"
-            class="mb-3 mt-3 rounded-pill border-primary jobs-font">
-          </b-form-input>
-          <b-form-input
-            v-model="text"
-            type="text"
-            placeholder="Умение использовать навигатор"
-            class="mb-3 mt-3 rounded-pill border-primary jobs-font">
-          </b-form-input>
-          <b-form-input
-            v-model="text"
+            v-model="number"
             type="text"
             placeholder="Дней в неделю готов работать"
             class="mb-3 mt-3 rounded-pill border-primary jobs-font">
@@ -78,7 +79,7 @@
           </div>
         </b-form>
       </b-col>
-      <img class="mt-3" src="../assets/img/footer-logo.svg">
+      <img class="py-5" src="../assets/img/footer-logo.svg">
     </b-row>
   </b-container>
 </div>
@@ -97,6 +98,7 @@ export default {
   data() {
     return {
       phone: '',
+      exp: false,
     };
   },
 };
@@ -107,6 +109,7 @@ export default {
 .jobs-page {
   background: url('../assets/img/bg-banner.svg') no-repeat;
   background-size: cover;
+  min-height: 100vh;
 }
 
 .jobs-form {
@@ -117,7 +120,7 @@ export default {
 }
 
 .jobs-font {
-  font-size: 12px;
+  font-size: 14px;
   @include media-breakpoint-down(sm) {
     font-size: 10px;
   }
