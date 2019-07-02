@@ -76,6 +76,7 @@ export default {
           alert(response.status);
           this.comment = '';
           this.phone = '';
+          this.selected = [];
         }).catch((error) => {
           alert(error);
         });
