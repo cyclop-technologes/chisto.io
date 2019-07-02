@@ -6,8 +6,7 @@
      placeholder="+7(_ _ _)_ _ _ _ _ _ _"
      v-mask="'+7##########'"
      v-model='content'
-     @input="handleInput"
- >
+     @input="handleInput">
  </b-form-input>
 </template>
 
