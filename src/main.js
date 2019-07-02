@@ -4,6 +4,7 @@ import axios from 'axios';
 import VueAxios from 'vue-axios';
 import VueMask from 'v-mask';
 import 'aos/dist/aos.css';
+import 'animate.css/animate.css'
 import BootstrapVue from 'bootstrap-vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {

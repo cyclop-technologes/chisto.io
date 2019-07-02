@@ -1,12 +1,12 @@
 <template lang="html">
   <b-container class="khimchistka-middle">
     <h1 class="h3-header text-uppercase mb-5">{{title}}</h1>
-    <b-row class="mb-5">
+    <b-row class="mb-5 khim-container">
       <b-col data-aos="fade-right" cols="12" lg="6" md="6">
         <p class="khimchistka-info">{{text}}</p>
       </b-col>
       <b-col data-aos="fade-left" cols="12" lg="3" md="6" class="ml-auto">
-        <h4 class="h4-header text-uppercase mb-4">предоставляемые услуги</h4>
+        <h4 class="h4-header text-uppercase sm-mt-2 mb-4">предоставляемые услуги</h4>
           <ul class="khimchistka-list">
             <li class="khimchistka-list-item mb-3">Химчистка мягкой мебели</li>
             <li class="khimchistka-list-item mb-3">Химчистка ковров, коврового покрытия</li>
@@ -80,6 +80,12 @@ export default {
     left: -20px;
     top: 50%;
     transform: translateY(-50%);
+  }
+}
+.khim-container {
+  @include media-breakpoint-down(sm) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
 </style>
