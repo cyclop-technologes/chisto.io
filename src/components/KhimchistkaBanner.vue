@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import InputPhone from '../components/InputPhone.vue';
+import InputPhone from './InputPhone.vue';
 
 export default {
   components: {
@@ -51,37 +51,38 @@ export default {
       disabled: false,
       comment: '',
       selected: [],
-        options: [
-          { text: 'Мебель', value: 'Мебель' },
-          { text: 'Матрас', value: 'Матрас' },
-          { text: 'Покрытие', value: 'Покрытие' },
-          { text: 'Другое', value: 'Другое' }
-        ]
+      options: [
+        { text: 'Мебель', value: 'Мебель' },
+        { text: 'Матрас', value: 'Матрас' },
+        { text: 'Покрытие', value: 'Покрытие' },
+        { text: 'Другое', value: 'Другое' },
+      ],
     };
   },
   methods: {
     sendData() {
       if (this.phone && this.comment) {
-        this.disabled = true
-        let data = JSON.stringify({
-            phone: this.phone,
-            comment: this.comment,
-            type_dry_clean: this.selected.join(';'),
-            source: 2,
-            type_clean: 4,
+        this.disabled = true;
+        const data = JSON.stringify({
+          phone: this.phone,
+          comment: this.comment,
+          type_dry_clean: this.selected.join(';'),
+          source: 2,
+          type_clean: 4,
         });
-        this.axios.post('http://crm.chisto.io/api/add_order.php?params=' + data).then(response => {
+        this.axios.post(`http://crm.chisto.io/api/add_order.php?params=${data}`).then((response) => {
           console.log(response);
           this.disabled = false;
           alert(response.status);
           this.comment = '';
           this.phone = '';
-        }).catch(error => {
-            alert(error);
-        })
+          this.selected = [];
+        }).catch((error) => {
+          alert(error);
+        });
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

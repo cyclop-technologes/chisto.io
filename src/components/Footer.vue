@@ -102,7 +102,10 @@ export default {
   padding: 0rem 5rem;
 }
 .footer-logo {
-  padding: 6.25rem 0rem;
+  padding: 6rem 0rem;
+  @include media-breakpoint-down(sm) {
+    padding: 2rem 0rem;
+  }
 }
 .contacts {
   text-align: center;

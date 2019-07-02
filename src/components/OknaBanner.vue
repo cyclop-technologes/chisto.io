@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import InputPhone from '../components/InputPhone.vue';
+import InputPhone from './InputPhone.vue';
 
 export default {
   components: {
@@ -55,24 +55,24 @@ export default {
   methods: {
     sendData() {
       if (this.phone && this.selected) {
-        this.disabled = true
-        let data = JSON.stringify({
-            phone: this.phone,
-            source: 2,
-            type_clean: this.selected,
+        this.disabled = true;
+        const data = JSON.stringify({
+          phone: this.phone,
+          source: 2,
+          type_clean: this.selected,
         });
-        this.axios.post('http://crm.chisto.io/api/add_order.php?params=' + data).then(response => {
+        this.axios.post(`http://crm.chisto.io/api/add_order.php?params=${data}`).then((response) => {
           console.log(response);
           this.disabled = false;
           alert(response.status);
           this.selected = 3;
           this.phone = '';
-        }).catch(error => {
-            alert(error);
-        })
+        }).catch((error) => {
+          alert(error);
+        });
       }
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss">
