@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="home-middle">
     <b-container>
-      <b-row>
+      <b-row class="d-none d-md-flex">
         <b-col cols="12" lg="3" class="items-description d-flex flex-column">
           <h1 class="h1-header text-uppercase mb-5">{{current.title}}</h1>
           <p>{{current.body}}</p>
@@ -30,6 +30,27 @@
             </b-col>
           </b-row>
         </b-col>
+      </b-row>
+      <b-row class="d-md-none">
+        <b-carousel id="carousel-1"
+          v-model="slide"
+          :interval="4000"
+          controls
+          background="#ababab"
+          img-width="1024"
+          img-height="480"
+          style="text-shadow: 1px 1px 2px #333;"
+          @sliding-start="onSlideStart"
+          @sliding-end="onSlideEnd">
+
+          <b-carousel-slide
+          v-for='(item, idx) in cleans'
+          :key="idx"
+          height="300px" :img-src="item.img"
+          class="position-relative">
+          </b-carousel-slide>
+        </b-carousel>
+        <div class="slide-caption">{{cleans[slide].title}}</div>
       </b-row>
     </b-container>
   </div>
@@ -92,6 +113,8 @@ export default {
       ],
       selected: 0,
       screenWidth: 0,
+      slide: 0,
+      sliding: null,
     };
   },
   computed: {
@@ -109,6 +132,12 @@ export default {
     handleResize() {
       this.screenWidth = window.innerWidth;
     },
+    onSlideStart(slide) {
+        this.sliding = true
+    },
+    onSlideEnd(slide) {
+        this.sliding = false
+    },
   },
   created() {
     window.addEventListener('resize', this.handleResize);
@@ -125,6 +154,10 @@ export default {
 .home-middle {
   padding: 8rem 0;
   background: linear-gradient(to right, $white 0%, $white 50%, $primary 50%, $primary 100%);
+  @include media-breakpoint-down(sm) {
+    background: $secondary;
+    padding: 4rem 0 2rem 0;
+  }
 }
 .home-button {
   margin-top: 6rem;
@@ -159,5 +192,12 @@ export default {
     justify-content: center;
     font-size: 12px;
   }
+}
+.slide-caption {
+  color: $white;
+  background: #1E2147;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
 }
 </style>
