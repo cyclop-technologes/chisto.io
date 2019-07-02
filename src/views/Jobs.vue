@@ -106,6 +106,7 @@ export default {
 @import '../assets/scss/main.scss';
 .jobs-page {
   background: url('../assets/img/bg-banner.svg') no-repeat;
+  background-size: cover;
 }
 
 .jobs-form {
