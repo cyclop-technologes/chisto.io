@@ -13,7 +13,7 @@
             class="mb-3 mt-3 rounded-pill border-primary jobs-font">
           </b-form-input>
           <b-form-input
-            v-model="number"
+            v-model="age"
             type="number"
             placeholder="Возраст"
             min="14"
@@ -21,50 +21,55 @@
             class="mb-3 mt-3 rounded-pill border-primary jobs-font">
           </b-form-input>
           <b-form-input
-            v-model="text"
+            v-model="country"
             type="text"
             placeholder="Гражданство"
             class="mb-3 mt-3 rounded-pill border-primary jobs-font">
           </b-form-input>
           <b-form-checkbox
             v-model="exp"
+            :options="expValue"
             name="checkbox-1"
             class="jobs-font">
             Опыт работы в клининге
           </b-form-checkbox>
           <b-form-input
-            v-model="text"
+            v-model="whereWork"
             v-show="exp"
             type="text"
             placeholder="Где и сколько по времени"
             class="mb-3 mt-3 rounded-pill border-primary jobs-font">
           </b-form-input>
           <b-form-checkbox
-            v-model="ills"
+            v-model="diseases"
+            :options="diseasesValue"
             name="checkbox-1"
             class="mb-3 mt-3 jobs-font">
             Заболевания кожи или аллергия
           </b-form-checkbox>
           <b-form-checkbox
             v-model="medbook"
+            :options="medValue"
             name="checkbox-1"
             class="mb-3 mt-3 jobs-font">
             Медицинская книжка
           </b-form-checkbox>
           <b-form-checkbox
             v-model="habits"
+            :options="habValue"
             name="checkbox-1"
             class="mb-3 mt-3 jobs-font">
             Вредные привычки
           </b-form-checkbox>
           <b-form-checkbox
             v-model="navigators"
+            :options="navigatValue"
             name="checkbox-1"
             class="mb-3 mt-3 jobs-font">
             Умею пользоваться навигатором
           </b-form-checkbox>
           <b-form-input
-            v-model="number"
+            v-model="workDays"
             type="text"
             placeholder="Дней в неделю готов работать"
             class="mb-3 mt-3 rounded-pill border-primary jobs-font">
@@ -99,6 +104,30 @@ export default {
     return {
       phone: '',
       exp: false,
+      expValue: [
+        { text: 'Нет', value: false },
+        { text: 'Есть', value: true },
+      ],
+      diseases: false,
+      diseasesValue: [
+        { text: 'Нет', value: false },
+        { text: 'Есть', value: true },
+      ],
+      medbook: false,
+      medValue: [
+        { text: 'Нет', value: false },
+        { text: 'Есть', value: true },
+      ],
+      habits: false,
+      habValue: [
+        { text: 'Нет', value: false },
+        { text: 'Есть', value: true },
+      ],
+      navigators: false,
+      navigatValue: [
+        { text: 'Умею', value: false },
+        { text: 'Неумею', value: true },
+      ],
     };
   },
 };
